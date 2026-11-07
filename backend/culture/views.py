@@ -4,11 +4,15 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
-from .models import District, Category, CulturalListing, Contribution, Review, CulturalGlossary
+from .models import (
+    District, Category, CulturalListing, DistrictArtForm,
+    CulturalPlace, ArtFormImage, Contribution, Review, CulturalGlossary
+)
 from .serializers import (
     DistrictSerializer, DistrictDetailSerializer,
     CategorySerializer,
     CulturalListingSerializer, CulturalListingSimpleSerializer,
+    CulturalPlaceSerializer, ArtFormImageSerializer, DistrictArtFormSerializer,
     ContributionSerializer, ReviewSerializer,
     CulturalGlossarySerializer
 )
@@ -31,7 +35,7 @@ def district_detail(request, slug):
     Get detailed information and approved cultural listings for a single district.
     """
     try:
-        district = District.objects.get(slug=slug)
+        district = District.objects.prefetch_related('cultural_places', 'listings').get(slug=slug)
     except District.DoesNotExist:
         return Response({'error': 'District not found'}, status=status.HTTP_404_NOT_FOUND)
 
@@ -52,11 +56,21 @@ def category_list(request):
 @api_view(['GET'])
 def listing_list(request):
     """
-    Filter and search verified cultural listings.
-    Supports query params: district, category, search, featured.
+    Filter and search cultural listings.
+    Supports query params: district, category, search, featured, curator_status, verified_only.
     """
-    # Strict rule: Only approved listings are shown publicly
-    qs = CulturalListing.objects.filter(verification_status='approved').prefetch_related('districts', 'category')
+    qs = CulturalListing.objects.all().select_related(
+        'category', 'origin_district'
+    ).prefetch_related(
+        'districts', 'gallery_images', 'places', 'district_associations'
+    )
+
+    # Optional curator status filter (e.g. ?curator_status=Verified)
+    curator_status = request.query_params.get('curator_status')
+    if curator_status:
+        qs = qs.filter(curator_status=curator_status)
+    elif request.query_params.get('verified_only') in ['true', '1', 'True']:
+        qs = qs.filter(curator_status='Verified')
 
     district_param = request.query_params.get('district')
     if district_param:
@@ -79,6 +93,8 @@ def listing_list(request):
             Q(description_en__icontains=query) |
             Q(locality__icontains=query) |
             Q(cultural_story__icontains=query) |
+            Q(historical_background__icontains=query) |
+            Q(history_summary__icontains=query) |
             Q(districts__name__icontains=query)
         ).distinct()
 
@@ -89,14 +105,37 @@ def listing_list(request):
 @api_view(['GET'])
 def listing_detail(request, pk):
     """
-    Retrieve single cultural listing details.
+    Retrieve single cultural listing details with galleries, places and district links.
     """
     try:
-        listing = CulturalListing.objects.prefetch_related('districts', 'category').get(pk=pk)
+        listing = CulturalListing.objects.select_related(
+            'category', 'origin_district'
+        ).prefetch_related(
+            'districts', 'gallery_images', 'places', 'district_associations'
+        ).get(pk=pk)
     except CulturalListing.DoesNotExist:
         return Response({'error': 'Cultural listing not found'}, status=status.HTTP_404_NOT_FOUND)
 
     serializer = CulturalListingSerializer(listing)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def cultural_place_list(request):
+    """
+    List verified cultural places, performance venues, and traditional practice locations.
+    """
+    qs = CulturalPlace.objects.select_related('district', 'art_form').all()
+    district_param = request.query_params.get('district')
+    if district_param:
+        qs = qs.filter(district__slug=district_param)
+    artform_param = request.query_params.get('art_form')
+    if artform_param:
+        qs = qs.filter(art_form_id=artform_param)
+    venue_type = request.query_params.get('venue_type')
+    if venue_type:
+        qs = qs.filter(venue_type=venue_type)
+    serializer = CulturalPlaceSerializer(qs, many=True)
     return Response(serializer.data)
 
 
@@ -252,4 +291,86 @@ def admin_reject_contribution(request, pk):
     return Response({
         'message': f"Contribution '{contrib.title}' rejected.",
         'comments': comments
+    })
+
+
+@api_view(['POST'])
+def admin_update_artform_image(request, pk):
+    """
+    Administrator image upload and replacement endpoint.
+    Accepts: image_url or image_file, caption, alt_text, photographer, source_url, licence, is_primary.
+    """
+    try:
+        listing = CulturalListing.objects.get(pk=pk)
+    except CulturalListing.DoesNotExist:
+        return Response({'error': 'Cultural listing not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    image_url = request.data.get('image_url') or request.data.get('image_file')
+    caption = request.data.get('caption', listing.title)
+    alt_text = request.data.get('alt_text', f"Authentic depiction of {listing.title}")
+    photographer = request.data.get('photographer', 'Wikimedia Commons / Archival Sourced')
+    source_url = request.data.get('source_url', 'https://www.keralatourism.org/artforms/')
+    licence = request.data.get('licence', 'CC BY-SA 4.0')
+    is_primary = request.data.get('is_primary', True)
+
+    if not image_url:
+        return Response({'error': 'Image URL or file path is required'}, status=status.HTTP_400_BAD_REQUEST)
+
+    if is_primary:
+        listing.image = image_url
+        listing.image_credit = f"{photographer} ({licence})"
+        listing.save()
+
+    # Also add or update in ArtFormImage gallery
+    gallery_img = ArtFormImage.objects.create(
+        art_form=listing,
+        district=listing.origin_district or listing.districts.first(),
+        image_url=image_url,
+        caption=caption,
+        alt_text=alt_text,
+        photographer=photographer,
+        source_url=source_url,
+        licence=licence,
+        verification_status='approved',
+        curator_status=listing.curator_status
+    )
+
+    return Response({
+        'message': f"Image updated successfully for {listing.title}.",
+        'listing_id': listing.id,
+        'image_url': listing.image,
+        'gallery_image_id': gallery_img.id
+    })
+
+
+@api_view(['POST'])
+def admin_update_curator_status(request, pk):
+    """
+    Update curator status: 'Verified', 'Needs Review', 'Unverified Demo Content'.
+    """
+    try:
+        listing = CulturalListing.objects.get(pk=pk)
+    except CulturalListing.DoesNotExist:
+        return Response({'error': 'Cultural listing not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    new_status = request.data.get('curator_status')
+    if new_status not in ['Verified', 'Needs Review', 'Unverified Demo Content']:
+        return Response({
+            'error': "Invalid status. Must be one of: 'Verified', 'Needs Review', 'Unverified Demo Content'"
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+    listing.curator_status = new_status
+    if new_status == 'Verified':
+        listing.verification_status = 'approved'
+    elif new_status == 'Needs Review':
+        listing.verification_status = 'pending'
+    else:
+        listing.verification_status = 'rejected'
+    listing.save()
+
+    return Response({
+        'message': f"Curator status updated to '{new_status}' for {listing.title}.",
+        'listing_id': listing.id,
+        'curator_status': listing.curator_status,
+        'verification_status': listing.verification_status
     })

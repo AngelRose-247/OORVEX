@@ -8,6 +8,7 @@ class District(models.Model):
     tagline = models.CharField(max_length=256, blank=True)
     description_en = models.TextField()
     description_ml = models.TextField()
+    history_editorial_note = models.TextField(blank=True, help_text="Editorial source and verification note for this district")
     headquarters = models.CharField(max_length=128)
     latitude = models.FloatField()
     longitude = models.FloatField()
@@ -47,11 +48,17 @@ class CulturalListing(models.Model):
         ('rejected', 'Rejected'),
     ]
 
+    CURATOR_STATUS_CHOICES = [
+        ('Verified', 'Verified'),
+        ('Needs Review', 'Needs Review'),
+        ('Unverified Demo Content', 'Unverified Demo Content'),
+    ]
+
     title = models.CharField(max_length=256)
     title_ml = models.CharField(max_length=256)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='listings')
     
-    # Distinction between practicing districts and place of origin
+    # Many-to-many relationship across Kerala districts
     districts = models.ManyToManyField(District, related_name='listings')
     origin_district = models.ForeignKey(
         District, 
@@ -66,9 +73,26 @@ class CulturalListing(models.Model):
 
     description_en = models.TextField()
     description_ml = models.TextField()
-    cultural_story = models.TextField(help_text="Deep narrative storytelling about legends, rituals, or lineage")
+    cultural_story = models.TextField(help_text="Deep narrative storytelling distinguishing legends from documented history")
     historical_background = models.TextField(blank=True)
     cultural_significance = models.TextField(blank=True)
+
+    # Expanded 1.1 History fields from dataset
+    history_summary = models.TextField(blank=True, help_text="Concise historical summary")
+    history_detail = models.TextField(blank=True, help_text="In-depth historical context, origin debate, and district connection")
+    history_sections = models.JSONField(default=list, blank=True, help_text="Suggested editorial sections for structured display")
+    district_association = models.TextField(blank=True, help_text="Practicing districts and regional association note")
+    editorial_status = models.CharField(max_length=128, default="Starter history – source review required", blank=True)
+    curator_status = models.CharField(max_length=64, choices=CURATOR_STATUS_CHOICES, default='Verified')
+    image_query = models.CharField(max_length=256, blank=True, help_text="Authentic image query string")
+    image_upload_fields = models.JSONField(default=list, blank=True)
+
+    # Detailed performance & artistic documentation
+    costumes = models.TextField(blank=True, help_text="Detailed description of traditional attire, headgear, makeup, face painting")
+    instruments = models.TextField(blank=True, help_text="Traditional musical and percussion instruments used in performance")
+    techniques = models.TextField(blank=True, help_text="Choreographic movements, mudras, vocalizations, and rhythmic styles")
+    historical_timeline = models.CharField(max_length=256, blank=True, help_text="Documented era or century when tradition emerged")
+    communities = models.CharField(max_length=256, blank=True, help_text="Hereditary practitioner communities and lineages")
     
     image = models.URLField(max_length=512)
     image_credit = models.CharField(max_length=256, default="Wikimedia Commons / CC BY-SA 4.0")
@@ -86,6 +110,78 @@ class CulturalListing(models.Model):
 
     def __str__(self):
         return f"{self.title} ({self.title_ml})"
+
+
+class DistrictArtForm(models.Model):
+    """
+    Explicit district-to-art-form linkage capturing local traditions and venues.
+    """
+    district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='district_artforms')
+    art_form = models.ForeignKey(CulturalListing, on_delete=models.CASCADE, related_name='district_associations')
+    locality = models.CharField(max_length=256, blank=True)
+    association_type = models.CharField(max_length=128, default='Regional Tradition', help_text="e.g. Origin & Heritage Shrine, Living Practice Venue, Festival Center")
+    source_reference = models.CharField(max_length=512, blank=True)
+    verification_status = models.CharField(max_length=32, choices=CulturalListing.STATUS_CHOICES, default='approved')
+
+    class Meta:
+        unique_together = ('district', 'art_form')
+        ordering = ['district', 'art_form']
+
+    def __str__(self):
+        return f"{self.art_form.title} in {self.district.name} ({self.association_type})"
+
+
+class CulturalPlace(models.Model):
+    """
+    Verified locations where visitors can experience or learn about Kerala's traditions.
+    """
+    VENUE_TYPE_CHOICES = [
+        ('permanent_institution', 'Permanent Institution / Academy'),
+        ('practice_location', 'Traditional Practice Location / Kalari / Workshop'),
+        ('festival_venue', 'Seasonal Festival Venue / Temple Shrine'),
+        ('performance_venue', 'Occasional Performance Venue / Theatre'),
+    ]
+
+    name = models.CharField(max_length=256)
+    district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='cultural_places')
+    locality = models.CharField(max_length=256)
+    description = models.TextField()
+    art_form = models.ForeignKey(CulturalListing, null=True, blank=True, on_delete=models.SET_NULL, related_name='places')
+    venue_type = models.CharField(max_length=64, choices=VENUE_TYPE_CHOICES, default='practice_location')
+    address = models.CharField(max_length=512, blank=True)
+    latitude = models.FloatField(null=True, blank=True)
+    longitude = models.FloatField(null=True, blank=True)
+    visitor_access_information = models.TextField(help_text="Visitor guidelines, seasonality, timings, and sacred space etiquette")
+    source_reference = models.CharField(max_length=512, blank=True)
+    curator_status = models.CharField(max_length=64, choices=CulturalListing.CURATOR_STATUS_CHOICES, default='Verified')
+
+    class Meta:
+        ordering = ['district', 'name']
+
+    def __str__(self):
+        return f"{self.name} - {self.district.name} ({self.get_venue_type_display()})"
+
+
+class ArtFormImage(models.Model):
+    """
+    Verified visual gallery mapping photographs directly to their authentic art form and district.
+    """
+    art_form = models.ForeignKey(CulturalListing, on_delete=models.CASCADE, related_name='gallery_images')
+    district = models.ForeignKey(District, null=True, blank=True, on_delete=models.SET_NULL, related_name='artform_images')
+    image_url = models.URLField(max_length=512)
+    caption = models.CharField(max_length=256)
+    alt_text = models.CharField(max_length=256)
+    photographer = models.CharField(max_length=256, blank=True)
+    source_url = models.URLField(max_length=512, blank=True)
+    licence = models.CharField(max_length=128, default="Wikimedia Commons / CC BY-SA 4.0")
+    verification_status = models.CharField(max_length=32, choices=CulturalListing.STATUS_CHOICES, default='approved')
+    curator_status = models.CharField(max_length=64, choices=CulturalListing.CURATOR_STATUS_CHOICES, default='Verified')
+
+    class Meta:
+        ordering = ['art_form', 'id']
+
+    def __str__(self):
+        return f"{self.caption} ({self.art_form.title})"
 
 
 class Contribution(models.Model):

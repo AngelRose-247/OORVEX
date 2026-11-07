@@ -1,0 +1,2085 @@
+{
+  "project": "OORVEX",
+  "dataset_title": "OORVEX Kerala 14 District Cultural Heritage Dataset – Expanded History",
+  "version": "1.1-expanded-history-starter",
+  "language": [
+    "en",
+    "ml"
+  ],
+  "usage_note": "Expanded editorial starter dataset. History fields include additional context and suggested editorial sections, but they are not a substitute for source verification. District associations are not necessarily exclusive origins. Verify historical claims, localities, venues, community consent, image rights and visitor access before marking records as Verified.",
+  "image_policy": {
+    "image_query_is_not_an_image_file": true,
+    "do_not_hotlink_without_permission": true,
+    "require_per_image_source_photographer_licence_and_alt_text": true,
+    "preferred_sources": [
+      "https://www.keralatourism.org/artforms/",
+      "https://www.keralatourism.org/districts/",
+      "https://spb.kerala.gov.in/sites/default/files/2022-03/ECNO_%20ENG_21_%20Vol_2.pdf",
+      "https://www.handicrafts.kerala.gov.in/index.php/handicraft-in-kerala",
+      "https://tisser.in/tisser-crafts/kerala/explorer.html"
+    ],
+    "image_approval_workflow": [
+      "Find an image that depicts the exact art form, craft or district.",
+      "Open the original source page and confirm the image belongs to the stated subject and locality.",
+      "Check the licence and whether reuse, editing and website publication are allowed.",
+      "Record photographer, source URL, licence, caption and descriptive alt text.",
+      "Upload the image to the OORVEX media library.",
+      "Preview it beside the correct district and art-form record.",
+      "Approve only after curator review; otherwise mark Needs Review."
+    ]
+  },
+  "districts": [
+    {
+      "district_no": 1,
+      "name": "Thiruvananthapuram",
+      "malayalam_name": "തിരുവനന്തപുരം",
+      "tagline": "Heritage of Travancore, classical arts and handloom",
+      "overview": "Thiruvananthapuram reflects the artistic and architectural legacy of the former Travancore region, with classical performance traditions, temple heritage, museums and handloom communities.",
+      "art_forms": [
+        {
+          "name": "Mohiniyattam",
+          "malayalam_name": "മോഹിനിയാട്ടം",
+          "category": "Classical dance",
+          "history_summary": "A classical dance tradition of Kerala known for graceful movements, expressive gestures and a repertoire shaped by devotional and literary themes. Its history should be presented as a Kerala-wide tradition, not as originating only in this district.",
+          "image_query": "Mohiniyattam Kerala classical dance white kasavu costume performance",
+          "district_association": "Kerala-wide; include Thiruvananthapuram institutions only when locally verified",
+          "status": "needs_local_verification",
+          "history_detail": "A classical dance tradition of Kerala known for graceful movements, expressive gestures and a repertoire shaped by devotional and literary themes. Its history should be presented as a Kerala-wide tradition, not as originating only in this district.\n\nFurther historical context: Place this tradition within Kerala's wider classical performance ecosystem. Explain its repertoire, training, music, gesture vocabulary and the institutions or teachers who sustain it. Do not assign a district as its place of origin unless a reliable source establishes that connection.\n\nDistrict connection: Kerala-wide; include Thiruvananthapuram institutions only when locally verified. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Kakkarissi Natakam",
+          "malayalam_name": "കാക്കരിശ്ശി നാടകം",
+          "category": "Folk theatre",
+          "history_summary": "A satirical folk theatre tradition found in parts of Kerala. Add district-specific history only after checking local troupe or cultural-institution records.",
+          "image_query": "Kakkarissi Natakam Kerala folk theatre performance",
+          "district_association": "Regional Kerala tradition; verify active local troupes",
+          "status": "needs_local_verification",
+          "history_detail": "A satirical folk theatre tradition found in parts of Kerala. Add district-specific history only after checking local troupe or cultural-institution records.\n\nFurther historical context: Explain the performance's storytelling, music, characters, costumes and community setting. Document local troupes and variants rather than assuming a uniform statewide form.\n\nDistrict connection: Regional Kerala tradition; verify active local troupes. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Balaramapuram Handloom",
+          "malayalam_name": "ബാലരാമപുരം കൈത്തറി",
+          "category": "Traditional craft",
+          "history_summary": "A renowned handloom tradition associated with Balaramapuram and fine cotton fabrics, including traditional kasavu borders. Record weaving techniques and artisan stories with source attribution.",
+          "image_query": "Balaramapuram handloom kasavu weaving loom Kerala",
+          "district_association": "Balaramapuram, Thiruvananthapuram",
+          "status": "documented_craft_cluster",
+          "history_detail": "A renowned handloom tradition associated with Balaramapuram and fine cotton fabrics, including traditional kasavu borders. Record weaving techniques and artisan stories with source attribution.\n\nFurther historical context: Explain the materials, tools, stages of making and the knowledge passed between makers. Include current livelihood context and identify the specific village or cooperative associated with the record.\n\nDistrict connection: Balaramapuram, Thiruvananthapuram. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "Balaramapuram Handloom Weaving Cluster",
+          "locality": "Balaramapuram",
+          "type": "Craft cluster",
+          "note": "Traditional handloom production and artisan heritage; confirm visitor access before recommending a visit."
+        },
+        {
+          "name": "Napier Museum",
+          "locality": "Thiruvananthapuram",
+          "type": "Museum",
+          "note": "Museum collection and architectural heritage; do not label it as a regular performance venue."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Thiruvananthapuram using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    },
+    {
+      "district_no": 2,
+      "name": "Kollam",
+      "malayalam_name": "കൊല്ലം",
+      "tagline": "Heritage of coir, waterways and traditional crafts",
+      "overview": "Kollam's heritage is shaped by its historic port, Ashtamudi backwaters, coastal communities and craft traditions including coir and screw-pine products.",
+      "art_forms": [
+        {
+          "name": "Kakkarissi Natakam",
+          "malayalam_name": "കാക്കരിശ്ശി നാടകം",
+          "category": "Folk theatre",
+          "history_summary": "A satirical folk theatre form found in parts of Kerala. District-specific performance groups and history must be verified before publishing a Kollam-specific claim.",
+          "image_query": "Kakkarissi Natakam Kerala folk theatre",
+          "district_association": "Kerala regional tradition; local association needs verification",
+          "status": "needs_local_verification",
+          "history_detail": "A satirical folk theatre form found in parts of Kerala. District-specific performance groups and history must be verified before publishing a Kollam-specific claim.\n\nFurther historical context: Explain the performance's storytelling, music, characters, costumes and community setting. Document local troupes and variants rather than assuming a uniform statewide form.\n\nDistrict connection: Kerala regional tradition; local association needs verification. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Screw-pine weaving",
+          "malayalam_name": "കൈതോല നെയ്ത്ത്",
+          "category": "Traditional craft",
+          "history_summary": "Artisans process screw-pine leaves into mats, baskets and household products. The Thazhava area is a documented craft cluster; include local maker voices where possible.",
+          "image_query": "Thazhava screw pine mat weaving Kollam Kerala",
+          "district_association": "Thazhava, Kollam",
+          "status": "documented_craft_cluster",
+          "history_detail": "Artisans process screw-pine leaves into mats, baskets and household products. The Thazhava area is a documented craft cluster; include local maker voices where possible.\n\nFurther historical context: Explain the materials, tools, stages of making and the knowledge passed between makers. Include current livelihood context and identify the specific village or cooperative associated with the record.\n\nDistrict connection: Thazhava, Kollam. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Coir making",
+          "malayalam_name": "കയർ നിർമ്മാണം",
+          "category": "Traditional craft",
+          "history_summary": "Coir is made from coconut husk fibre and used for ropes, mats and other products. Explain local production processes and livelihoods without suggesting this craft is exclusive to Kollam.",
+          "image_query": "Kollam Kerala traditional coir spinning weaving",
+          "district_association": "Kollam coastal and backwater areas; exact cluster to verify",
+          "status": "needs_locality_verification",
+          "history_detail": "Coir is made from coconut husk fibre and used for ropes, mats and other products. Explain local production processes and livelihoods without suggesting this craft is exclusive to Kollam.\n\nFurther historical context: Explain the materials, tools, stages of making and the knowledge passed between makers. Include current livelihood context and identify the specific village or cooperative associated with the record.\n\nDistrict connection: Kollam coastal and backwater areas; exact cluster to verify. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "Thazhava Craft Cluster",
+          "locality": "Thazhava",
+          "type": "Craft cluster",
+          "note": "Screw-pine product heritage; confirm workshop visits with local artisans."
+        },
+        {
+          "name": "Thangassery Lighthouse and heritage area",
+          "locality": "Thangassery",
+          "type": "Heritage site",
+          "note": "Coastal and maritime history, not a performance venue."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Kollam using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    },
+    {
+      "district_no": 3,
+      "name": "Pathanamthitta",
+      "malayalam_name": "പത്തനംതിട്ട",
+      "tagline": "Land of Padayani, Aranmula Kannadi and river heritage",
+      "overview": "Pathanamthitta is known for Central Travancore ritual traditions, temple heritage, the Pamba river and the distinctive metal mirror craft of Aranmula.",
+      "art_forms": [
+        {
+          "name": "Padayani",
+          "malayalam_name": "പടയണി",
+          "category": "Ritual theatre",
+          "history_summary": "A ritual theatre tradition associated with Bhadrakali temples in Central Travancore. Performances use large painted kolams, rhythmic percussion, dance and ritual storytelling. Festival duration and local variants differ by village.",
+          "image_query": "Kadammanitta Padayani large kolam Kerala ritual art",
+          "district_association": "Kadammanitta and other Pathanamthitta localities; Central Travancore tradition",
+          "status": "documented",
+          "history_detail": "A ritual theatre tradition associated with Bhadrakali temples in Central Travancore. Performances use large painted kolams, rhythmic percussion, dance and ritual storytelling. Festival duration and local variants differ by village.\n\nFurther historical context: Describe the ritual setting, associated shrine or festival, performers' roles, music, costume and community meaning. Make clear that these performances are tied to particular ritual calendars and may have access restrictions.\n\nDistrict connection: Kadammanitta and other Pathanamthitta localities; Central Travancore tradition. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Aranmula Kannadi",
+          "malayalam_name": "ആറന്മുള കണ്ണാടി",
+          "category": "Metal craft",
+          "history_summary": "A handmade front-surface metal mirror produced by specialist artisan families in Aranmula using a closely guarded alloy-working process. Explain the craft through documented artisan accounts; distinguish origin legends from verifiable history.",
+          "image_query": "Aranmula Kannadi handmade metal mirror artisan",
+          "district_association": "Aranmula, Pathanamthitta",
+          "status": "documented",
+          "history_detail": "A handmade front-surface metal mirror produced by specialist artisan families in Aranmula using a closely guarded alloy-working process. Explain the craft through documented artisan accounts; distinguish origin legends from verifiable history.\n\nFurther historical context: Describe the metal or alloy, forming and finishing techniques, specialist knowledge and the role of artisan families. Avoid revealing confidential techniques or repeating origin legends as established fact.\n\nDistrict connection: Aranmula, Pathanamthitta. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Aranmula Vallamkali",
+          "malayalam_name": "ആറന്മുള വള്ളംകളി",
+          "category": "Boat and festival tradition",
+          "history_summary": "The Aranmula boat race is associated with the annual Onam season and the ceremonial snake boats known as palliyodams. Include its temple and community context respectfully.",
+          "image_query": "Aranmula Uthrattathi boat race palliyodam snake boats",
+          "district_association": "Aranmula, Pathanamthitta",
+          "status": "documented",
+          "history_detail": "The Aranmula boat race is associated with the annual Onam season and the ceremonial snake boats known as palliyodams. Include its temple and community context respectfully.\n\nFurther historical context: Explain the tradition's historical setting, distinctive features, community context and how it is practised today. Keep district-specific claims separate from wider Kerala or neighbouring-region history.\n\nDistrict connection: Aranmula, Pathanamthitta. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "Aranmula Heritage Village",
+          "locality": "Aranmula",
+          "type": "Heritage village",
+          "note": "Known for Aranmula Kannadi, Parthasarathy Temple and boat-race traditions."
+        },
+        {
+          "name": "Kadammanitta Padayani sites",
+          "locality": "Kadammanitta",
+          "type": "Seasonal ritual venue",
+          "note": "Padayani is tied to temple festival calendars; check dates and visitor protocols."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Pathanamthitta using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    },
+    {
+      "district_no": 4,
+      "name": "Alappuzha",
+      "malayalam_name": "ആലപ്പുഴ",
+      "tagline": "Heritage of backwaters, boat races and coir",
+      "overview": "Alappuzha's cultural identity is closely connected with the backwaters, coir industry, snake-boat traditions and village festivals.",
+      "art_forms": [
+        {
+          "name": "Neelamperoor Padayani",
+          "malayalam_name": "നീലമ്പേരൂർ പടയണി",
+          "category": "Ritual folk art",
+          "history_summary": "A distinctive Padayani tradition associated with Neelamperoor, known for elaborate effigies and a festival setting. Describe its local ritual context using Kerala Tourism and temple/community sources.",
+          "image_query": "Neelamperoor Padayani effigies festival Kerala",
+          "district_association": "Neelamperoor, Alappuzha",
+          "status": "documented",
+          "history_detail": "A distinctive Padayani tradition associated with Neelamperoor, known for elaborate effigies and a festival setting. Describe its local ritual context using Kerala Tourism and temple/community sources.\n\nFurther historical context: Explain the local ritual calendar, community role, performance elements and associated place. Mark any sacred or restricted content and follow local photography rules.\n\nDistrict connection: Neelamperoor, Alappuzha. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Chavittunatakam",
+          "malayalam_name": "ചവിട്ടുനാടകം",
+          "category": "Folk theatre",
+          "history_summary": "A musical dance-drama associated with Kerala's Latin Christian coastal communities, featuring vigorous steps, dramatic costumes and story-based performances. Verify specific Alappuzha troupes and local history.",
+          "image_query": "Chavittunatakam Kerala Christian folk theatre performance",
+          "district_association": "Coastal Kerala; district-specific local troupe verification needed",
+          "status": "needs_local_verification",
+          "history_detail": "A musical dance-drama associated with Kerala's Latin Christian coastal communities, featuring vigorous steps, dramatic costumes and story-based performances. Verify specific Alappuzha troupes and local history.\n\nFurther historical context: Explain the performance's storytelling, music, characters, costumes and community setting. Document local troupes and variants rather than assuming a uniform statewide form.\n\nDistrict connection: Coastal Kerala; district-specific local troupe verification needed. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Coir weaving",
+          "malayalam_name": "കയർ നെയ്ത്ത്",
+          "category": "Traditional craft",
+          "history_summary": "Coconut husk fibre is processed and woven into mats, ropes and household products. Alappuzha and Cherthala are important coir craft areas.",
+          "image_query": "Alappuzha Cherthala coir weaving women traditional craft",
+          "district_association": "Alappuzha and Cherthala",
+          "status": "documented_craft_cluster",
+          "history_detail": "Coconut husk fibre is processed and woven into mats, ropes and household products. Alappuzha and Cherthala are important coir craft areas.\n\nFurther historical context: Explain the materials, tools, stages of making and the knowledge passed between makers. Include current livelihood context and identify the specific village or cooperative associated with the record.\n\nDistrict connection: Alappuzha and Cherthala. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "Neelamperoor Palli Bhagavathy Temple area",
+          "locality": "Neelamperoor",
+          "type": "Seasonal ritual venue",
+          "note": "Associated with the local Padayani festival; check the temple calendar and access rules."
+        },
+        {
+          "name": "Cherthala coir craft cluster",
+          "locality": "Cherthala",
+          "type": "Craft cluster",
+          "note": "Coir production and artisan heritage; arrange visits with a local cooperative or producer."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Alappuzha using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    },
+    {
+      "district_no": 5,
+      "name": "Kottayam",
+      "malayalam_name": "കോട്ടയം",
+      "tagline": "Heritage of literature, community traditions and performing arts",
+      "overview": "Kottayam's cultural heritage includes literary institutions, temple and church traditions, performing arts, and traditional pottery and craft communities.",
+      "art_forms": [
+        {
+          "name": "Margamkali",
+          "malayalam_name": "മാർഗംകളി",
+          "category": "Christian folk dance",
+          "history_summary": "A group dance tradition of Kerala's Syrian Christian community, traditionally performed around a lamp with songs narrating the story of St Thomas and the Christian faith in Kerala. Verify local groups and performance context.",
+          "image_query": "Kerala Margamkali Syrian Christian traditional dance around lamp",
+          "district_association": "Central Kerala; local Kottayam troupes to verify",
+          "status": "needs_local_verification",
+          "history_detail": "A group dance tradition of Kerala's Syrian Christian community, traditionally performed around a lamp with songs narrating the story of St Thomas and the Christian faith in Kerala. Verify local groups and performance context.\n\nFurther historical context: Explain the community setting, songs, formation, movement and occasions of performance. Distinguish local traditions and avoid treating all Christian communities in Kerala as culturally identical.\n\nDistrict connection: Central Kerala; local Kottayam troupes to verify. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Thiruvathirakali",
+          "malayalam_name": "തിരുവാതിരക്കളി",
+          "category": "Folk dance",
+          "history_summary": "A women's group dance performed in a circle, particularly associated with Thiruvathira and other festive occasions. Its practice is found across Kerala; avoid assigning an exclusive origin to Kottayam.",
+          "image_query": "Kerala Thiruvathirakali women dance kasavu traditional",
+          "district_association": "Kerala-wide; local Kottayam performances to verify",
+          "status": "statewide_tradition",
+          "history_detail": "A women's group dance performed in a circle, particularly associated with Thiruvathira and other festive occasions. Its practice is found across Kerala; avoid assigning an exclusive origin to Kottayam.\n\nFurther historical context: Explain the group formation, movement vocabulary, music or rhythm, costume and occasions when it is performed. Identify the communities and local variants through practitioner or institutional sources.\n\nDistrict connection: Kerala-wide; local Kottayam performances to verify. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Vadayar pottery",
+          "malayalam_name": "വടയാർ മൺപാത്ര നിർമ്മാണം",
+          "category": "Traditional craft",
+          "history_summary": "Traditional pottery products are associated with the Vadayar rural art-hub listing. Add artisan interviews and process photographs to document the contemporary practice.",
+          "image_query": "Vadayar Kottayam Kerala traditional pottery artisan clay pots",
+          "district_association": "Vadayar, Kottayam",
+          "status": "documented_craft_cluster",
+          "history_detail": "Traditional pottery products are associated with the Vadayar rural art-hub listing. Add artisan interviews and process photographs to document the contemporary practice.\n\nFurther historical context: Explain the materials, tools, stages of making and the knowledge passed between makers. Include current livelihood context and identify the specific village or cooperative associated with the record.\n\nDistrict connection: Vadayar, Kottayam. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "Vadayar pottery cluster",
+          "locality": "Vadayar",
+          "type": "Craft cluster",
+          "note": "Traditional pottery production; confirm active workshops and visitor access."
+        },
+        {
+          "name": "Vaikom Mahadeva Temple heritage area",
+          "locality": "Vaikom",
+          "type": "Heritage site",
+          "note": "Temple and regional cultural history; not a guaranteed performance venue."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Kottayam using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    },
+    {
+      "district_no": 6,
+      "name": "Idukki",
+      "malayalam_name": "ഇടുക്കി",
+      "tagline": "Heritage of mountain communities, forests and indigenous crafts",
+      "overview": "Idukki's heritage is shaped by high-range landscapes and the knowledge, crafts, music and community traditions of its indigenous peoples. Cultural descriptions should be developed with the communities concerned.",
+      "art_forms": [
+        {
+          "name": "Mannan community performance traditions",
+          "malayalam_name": "മന്നാൻ കലാപാരമ്പര്യങ്ങൾ",
+          "category": "Indigenous community traditions",
+          "history_summary": "Document the songs, dances, ritual practices and oral histories of Mannan communities only with community-led sources, correct terminology and informed consent. Do not combine distinct communities into one generic tribal category.",
+          "image_query": "Mannan tribal community traditional performance Idukki Kerala with consent",
+          "district_association": "Idukki; exact community and locality must be verified",
+          "status": "community_verification_required",
+          "history_detail": "Document the songs, dances, ritual practices and oral histories of Mannan communities only with community-led sources, correct terminology and informed consent. Do not combine distinct communities into one generic tribal category.\n\nFurther historical context: Use community-approved descriptions and identify the specific community, locality and occasion. Do not generalise across Adivasi communities or publish restricted knowledge, sacred material or photographs without informed consent.\n\nDistrict connection: Idukki; exact community and locality must be verified. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Needs community or locality verification",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Kannadippaya bamboo mat craft",
+          "malayalam_name": "കണ്ണാടിപ്പായ",
+          "category": "Traditional craft",
+          "history_summary": "A distinctive fine bamboo mat craft associated with indigenous artisan knowledge in Idukki. Document materials, weaving methods and makers with consent.",
+          "image_query": "Kannadippaya Idukki bamboo mat weaving artisan",
+          "district_association": "Idukki",
+          "status": "documented_craft_cluster",
+          "history_detail": "A distinctive fine bamboo mat craft associated with indigenous artisan knowledge in Idukki. Document materials, weaving methods and makers with consent.\n\nFurther historical context: Explain the materials, tools, stages of making and the knowledge passed between makers. Include current livelihood context and identify the specific village or cooperative associated with the record.\n\nDistrict connection: Idukki. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Bamboo and cane craft",
+          "malayalam_name": "മുള-ചൂരൽ കരകൗശലം",
+          "category": "Traditional craft",
+          "history_summary": "Bamboo and cane are used to make household and utility objects. Identify the exact artisan settlements and communities rather than attributing all products to one group.",
+          "image_query": "Idukki Kerala bamboo cane handicraft artisan weaving",
+          "district_association": "Thekkady and other Idukki craft areas; verify specific cluster",
+          "status": "needs_locality_verification",
+          "history_detail": "Bamboo and cane are used to make household and utility objects. Identify the exact artisan settlements and communities rather than attributing all products to one group.\n\nFurther historical context: Explain the materials, tools, stages of making and the knowledge passed between makers. Include current livelihood context and identify the specific village or cooperative associated with the record.\n\nDistrict connection: Thekkady and other Idukki craft areas; verify specific cluster. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "Thekkady craft experiences",
+          "locality": "Thekkady",
+          "type": "Craft experience area",
+          "note": "Use only verified community-run craft experiences and obtain consent for cultural demonstrations."
+        },
+        {
+          "name": "Idukki indigenous craft clusters",
+          "locality": "Specific village to be confirmed",
+          "type": "Community craft cluster",
+          "note": "Do not publish a map pin until the exact participating community and location are confirmed."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Idukki using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    },
+    {
+      "district_no": 7,
+      "name": "Ernakulam",
+      "malayalam_name": "എറണാകുളം",
+      "tagline": "Heritage of port cities, handloom and diverse communities",
+      "overview": "Ernakulam's heritage reflects maritime exchange, the layered history of Fort Kochi and Mattancherry, diverse religious communities and the handloom traditions of Chendamangalam.",
+      "art_forms": [
+        {
+          "name": "Chavittunatakam",
+          "malayalam_name": "ചവിട്ടുനാടകം",
+          "category": "Folk theatre",
+          "history_summary": "A vigorous musical dance-drama associated with Latin Christian communities of Kerala's coast, with dramatic costumes, strong footwork and theatrical storytelling. Document local troupes and repertory.",
+          "image_query": "Chavittunatakam Fort Kochi Kerala traditional theatre performance",
+          "district_association": "Fort Kochi and coastal Kerala; confirm current local troupes",
+          "status": "needs_local_verification",
+          "history_detail": "A vigorous musical dance-drama associated with Latin Christian communities of Kerala's coast, with dramatic costumes, strong footwork and theatrical storytelling. Document local troupes and repertory.\n\nFurther historical context: Explain the performance's storytelling, music, characters, costumes and community setting. Document local troupes and variants rather than assuming a uniform statewide form.\n\nDistrict connection: Fort Kochi and coastal Kerala; confirm current local troupes. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Mudiyettu",
+          "malayalam_name": "മുടിയേറ്റ്",
+          "category": "Ritual theatre",
+          "history_summary": "A ritual theatre tradition enacting the story of Goddess Kali and the demon Darika, associated with Bhagavati temples in central Kerala. Verify the specific Ernakulam temple or troupe before assigning a district venue.",
+          "image_query": "Mudiyettu Kerala ritual theatre Kali Darika performance",
+          "district_association": "Central Kerala; exact Ernakulam locality needs verification",
+          "status": "regional_association",
+          "history_detail": "A ritual theatre tradition enacting the story of Goddess Kali and the demon Darika, associated with Bhagavati temples in central Kerala. Verify the specific Ernakulam temple or troupe before assigning a district venue.\n\nFurther historical context: Describe the ritual setting, associated shrine or festival, performers' roles, music, costume and community meaning. Make clear that these performances are tied to particular ritual calendars and may have access restrictions.\n\nDistrict connection: Central Kerala; exact Ernakulam locality needs verification. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Chendamangalam handloom",
+          "malayalam_name": "ചേന്ദമംഗലം കൈത്തറി",
+          "category": "Traditional craft",
+          "history_summary": "A handloom tradition known for dhoties and set mundu textiles, produced by weaving communities in Chendamangalam. Include the history of local weaving families and the impact of the 2018 floods only with reliable sources.",
+          "image_query": "Chendamangalam handloom weaving Kerala dhoti set mundu",
+          "district_association": "Chendamangalam, Ernakulam",
+          "status": "documented_craft_cluster",
+          "history_detail": "A handloom tradition known for dhoties and set mundu textiles, produced by weaving communities in Chendamangalam. Include the history of local weaving families and the impact of the 2018 floods only with reliable sources.\n\nFurther historical context: Explain the materials, tools, stages of making and the knowledge passed between makers. Include current livelihood context and identify the specific village or cooperative associated with the record.\n\nDistrict connection: Chendamangalam, Ernakulam. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "Chendamangalam handloom cluster",
+          "locality": "Chendamangalam, North Paravur",
+          "type": "Craft cluster",
+          "note": "Traditional weaving; arrange a visit through an active cooperative or artisan group."
+        },
+        {
+          "name": "Fort Kochi and Mattancherry heritage area",
+          "locality": "Kochi",
+          "type": "Heritage precinct",
+          "note": "Maritime and multicultural heritage; not a single art-form performance venue."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Ernakulam using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    },
+    {
+      "district_no": 8,
+      "name": "Thrissur",
+      "malayalam_name": "തൃശ്ശൂർ",
+      "tagline": "Cultural capital of Kerala, temple arts and festivals",
+      "overview": "Thrissur is widely associated with temple festivals, percussion ensembles, ritual arts, classical performance institutions and important handloom and metal craft clusters.",
+      "art_forms": [
+        {
+          "name": "Pulikali",
+          "malayalam_name": "പുലികളി",
+          "category": "Folk performance",
+          "history_summary": "A festive performance in which participants paint their bodies as tigers and leopards and dance to percussion. Thrissur's Onam Pulikali is a major public cultural event.",
+          "image_query": "Thrissur Pulikali Onam tiger dance performers",
+          "district_association": "Thrissur city",
+          "status": "documented",
+          "history_detail": "A festive performance in which participants paint their bodies as tigers and leopards and dance to percussion. Thrissur's Onam Pulikali is a major public cultural event.\n\nFurther historical context: Explain the occasion, movement, costume, music and participation of performers and audiences. Include the exact local version and avoid claiming it is unique to one district without evidence.\n\nDistrict connection: Thrissur city. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Kummattikkali",
+          "malayalam_name": "കുമ്മാട്ടിക്കളി",
+          "category": "Mask dance",
+          "history_summary": "A colourful mask dance associated with Onam in parts of central and northern Kerala. Performers wear masks and costumes made from natural materials and move through neighbourhoods to music.",
+          "image_query": "Thrissur Kummattikkali traditional wooden masks Onam",
+          "district_association": "Thrissur and other Kerala localities; identify local festival context",
+          "status": "regional_association",
+          "history_detail": "A colourful mask dance associated with Onam in parts of central and northern Kerala. Performers wear masks and costumes made from natural materials and move through neighbourhoods to music.\n\nFurther historical context: Explain the mask-making materials, characters, movement, music and festival context. Local forms and costume details should be verified with practitioners.\n\nDistrict connection: Thrissur and other Kerala localities; identify local festival context. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Mudiyettu",
+          "malayalam_name": "മുടിയേറ്റ്",
+          "category": "Ritual theatre",
+          "history_summary": "A ritual theatre tradition narrating the battle between Kali and Darika, performed in Bhagavati temples in central Kerala. Document specific temple traditions and practitioners.",
+          "image_query": "Kerala Mudiyettu ritual theatre performer Kali Darika",
+          "district_association": "Central Kerala, including documented Thrissur-area traditions where verified",
+          "status": "regional_association",
+          "history_detail": "A ritual theatre tradition narrating the battle between Kali and Darika, performed in Bhagavati temples in central Kerala. Document specific temple traditions and practitioners.\n\nFurther historical context: Describe the ritual setting, associated shrine or festival, performers' roles, music, costume and community meaning. Make clear that these performances are tied to particular ritual calendars and may have access restrictions.\n\nDistrict connection: Central Kerala, including documented Thrissur-area traditions where verified. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Kuthampully handloom",
+          "malayalam_name": "കുത്താമ്പുള്ളി കൈത്തറി",
+          "category": "Traditional craft",
+          "history_summary": "A renowned handloom cluster known for kasavu textiles and traditional garments. Document weaving processes, artisan families and GI-linked product details accurately.",
+          "image_query": "Kuthampully handloom kasavu saree weaving Thrissur",
+          "district_association": "Kuthampully, Thrissur",
+          "status": "documented_craft_cluster",
+          "history_detail": "A renowned handloom cluster known for kasavu textiles and traditional garments. Document weaving processes, artisan families and GI-linked product details accurately.\n\nFurther historical context: Explain the materials, tools, stages of making and the knowledge passed between makers. Include current livelihood context and identify the specific village or cooperative associated with the record.\n\nDistrict connection: Kuthampully, Thrissur. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "Kuthampully handloom village",
+          "locality": "Kuthampully",
+          "type": "Craft cluster",
+          "note": "Traditional kasavu weaving and artisan heritage."
+        },
+        {
+          "name": "Kerala Kalamandalam",
+          "locality": "Cheruthuruthy",
+          "type": "Performing arts institution",
+          "note": "Major institution for Kerala classical and traditional performing arts; verify visitor and performance schedules."
+        },
+        {
+          "name": "Thrissur Pooram venues",
+          "locality": "Thrissur city",
+          "type": "Seasonal festival venue",
+          "note": "Festival-specific performances and processions; dates vary annually."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Thrissur using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    },
+    {
+      "district_no": 9,
+      "name": "Palakkad",
+      "malayalam_name": "പാലക്കാട്",
+      "tagline": "Heritage of folk theatre, percussion and traditional performance",
+      "overview": "Palakkad's cultural landscape includes folk performance traditions, temple arts, percussion instruments, traditional costume making and craft communities.",
+      "art_forms": [
+        {
+          "name": "Kanyarkali",
+          "malayalam_name": "കണ്യാർകളി",
+          "category": "Folk dance and theatre",
+          "history_summary": "A folk performance tradition associated with the Palakkad region, combining dance, songs, rhythm and dramatic episodes. Record local variants and festival contexts from practitioners.",
+          "image_query": "Palakkad Kanyarkali folk dance performance Kerala",
+          "district_association": "Palakkad",
+          "status": "documented_regional",
+          "history_detail": "A folk performance tradition associated with the Palakkad region, combining dance, songs, rhythm and dramatic episodes. Record local variants and festival contexts from practitioners.\n\nFurther historical context: Explain how dance, song, dialogue and dramatic episodes work together. Include the performance setting, local language, costumes and the role of community performers.\n\nDistrict connection: Palakkad. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Tholpavakoothu",
+          "malayalam_name": "തോൽപ്പാവക്കൂത്ത്",
+          "category": "Shadow puppetry",
+          "history_summary": "A ritual shadow-puppet theatre tradition performed using leather puppets behind a lit screen, traditionally narrating episodes from the Ramayana in temple settings. Document the role of puppet makers, performers and local temple calendars.",
+          "image_query": "Tholpavakoothu leather shadow puppets Kerala lamp screen",
+          "district_association": "Palakkad and adjoining regions; exact temple venues to verify",
+          "status": "documented_regional",
+          "history_detail": "A ritual shadow-puppet theatre tradition performed using leather puppets behind a lit screen, traditionally narrating episodes from the Ramayana in temple settings. Document the role of puppet makers, performers and local temple calendars.\n\nFurther historical context: Describe the puppets and materials, screen, light source, narration, music and performance setting. Explain the relationship with temple festivals and the epics where documented, while identifying local practitioner lineages.\n\nDistrict connection: Palakkad and adjoining regions; exact temple venues to verify. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Maddalam craft",
+          "malayalam_name": "മദ്ദളം നിർമ്മാണം",
+          "category": "Musical instrument craft",
+          "history_summary": "Palakkad is associated with the Maddalam geographical indication. Explain the instrument's construction and role in Kerala percussion only with maker and music-institution sources.",
+          "image_query": "Kerala maddalam traditional percussion instrument artisan making",
+          "district_association": "Palakkad",
+          "status": "documented_craft",
+          "history_detail": "Palakkad is associated with the Maddalam geographical indication. Explain the instrument's construction and role in Kerala percussion only with maker and music-institution sources.\n\nFurther historical context: Describe the instrument's role in performance, materials, construction, tuning and the specialist skills of makers. Use maker interviews and official craft documentation for technical details.\n\nDistrict connection: Palakkad. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Vellinezhi Kathakali costume tradition",
+          "malayalam_name": "വെള്ളിനേഴി കഥകളി വേഷം",
+          "category": "Costume craft",
+          "history_summary": "Vellinezhi is associated with Kathakali costume and related performance craft traditions. Document artisans, costume preparation and the relationship with nearby performance institutions.",
+          "image_query": "Vellinezhi Kathakali costume making Palakkad Kerala",
+          "district_association": "Vellinezhi, Palakkad",
+          "status": "documented_craft_cluster",
+          "history_detail": "Vellinezhi is associated with Kathakali costume and related performance craft traditions. Document artisans, costume preparation and the relationship with nearby performance institutions.\n\nFurther historical context: Describe the costume components, materials, preparation, decorative techniques and relationship with the performance tradition. Credit costume makers and avoid treating costume production as a performance venue.\n\nDistrict connection: Vellinezhi, Palakkad. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "Vellinezhi cultural craft cluster",
+          "locality": "Vellinezhi",
+          "type": "Costume craft cluster",
+          "note": "Kathakali costume-related heritage; arrange visits with local artisans."
+        },
+        {
+          "name": "Tholpavakoothu performance sites",
+          "locality": "Specific temple to be confirmed",
+          "type": "Seasonal ritual venue",
+          "note": "Add individual temple pins only after checking the annual performance calendar."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Palakkad using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    },
+    {
+      "district_no": 10,
+      "name": "Malappuram",
+      "malayalam_name": "മലപ്പുറം",
+      "tagline": "Heritage of Mappila arts, Malayalam literature and Ayurveda",
+      "overview": "Malappuram's heritage reflects the cultural exchanges of northern Kerala, Mappila song and performance traditions, Malayalam literary history and Ayurveda. Tirur is associated with Thunchath Ezhuthachan, while Kottakkal is known for its Ayurvedic institution and performing-arts heritage.",
+      "art_forms": [
+        {
+          "name": "Oppana",
+          "malayalam_name": "ഒപ്പന",
+          "category": "Mappila folk dance",
+          "history_summary": "A celebratory Mappila dance especially associated with weddings. Singers clap and move around the bride while performing Mappilappattu. Describe local styles and costumes with practitioner sources.",
+          "image_query": "Malappuram Mappila Oppana wedding dance Kerala",
+          "district_association": "Malabar; district-specific troupes to verify",
+          "status": "documented_regional",
+          "history_detail": "A celebratory Mappila dance especially associated with weddings. Singers clap and move around the bride while performing Mappilappattu. Describe local styles and costumes with practitioner sources.\n\nFurther historical context: Place the form within the cultural history of Kerala's Mappila communities. Explain its songs, rhythm, social occasions, costume and community setting, using sources from practitioners and cultural institutions.\n\nDistrict connection: Malabar; district-specific troupes to verify. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Duffmuttu",
+          "malayalam_name": "ദഫ് മുട്ട്",
+          "category": "Mappila folk performance",
+          "history_summary": "A group performance using the duff frame drum, with lead singing, chorus and coordinated rhythmic movements. It is associated with celebrations and religious-cultural gatherings.",
+          "image_query": "Malappuram Duffmuttu Mappila performers duff drums",
+          "district_association": "Malappuram and wider Malabar",
+          "status": "documented",
+          "history_detail": "A group performance using the duff frame drum, with lead singing, chorus and coordinated rhythmic movements. It is associated with celebrations and religious-cultural gatherings.\n\nFurther historical context: Explain the role of rhythm, group singing, percussion and community gatherings. Describe the instrument and performance structure without reducing the tradition to a tourist spectacle.\n\nDistrict connection: Malappuram and wider Malabar. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Aravanamuttu",
+          "malayalam_name": "അറബനമുട്ട്",
+          "category": "Mappila folk performance",
+          "history_summary": "A group performance using the Arabana drum, combining rhythmic singing and coordinated movement. Record its ceremonial contexts using local practitioner sources.",
+          "image_query": "Aravanamuttu Arabana Muttu Kerala Mappila drum performance",
+          "district_association": "Malappuram and Malabar",
+          "status": "documented",
+          "history_detail": "A group performance using the Arabana drum, combining rhythmic singing and coordinated movement. Record its ceremonial contexts using local practitioner sources.\n\nFurther historical context: Explain the role of rhythm, group singing, percussion and community gatherings. Describe the instrument and performance structure without reducing the tradition to a tourist spectacle.\n\nDistrict connection: Malappuram and Malabar. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Kolkali",
+          "malayalam_name": "കോൽക്കളി",
+          "category": "Folk dance",
+          "history_summary": "A group dance in which performers move in formations and strike short wooden sticks rhythmically. The Malabar tradition includes influences from martial movement practices.",
+          "image_query": "Malappuram Malabar Kolkali folk dance sticks",
+          "district_association": "Malappuram and northern Kerala",
+          "status": "documented",
+          "history_detail": "A group dance in which performers move in formations and strike short wooden sticks rhythmically. The Malabar tradition includes influences from martial movement practices.\n\nFurther historical context: Explain the group formation, movement vocabulary, music or rhythm, costume and occasions when it is performed. Identify the communities and local variants through practitioner or institutional sources.\n\nDistrict connection: Malappuram and northern Kerala. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Chavittukali",
+          "malayalam_name": "ചവിട്ടുകളി",
+          "category": "Folk dance",
+          "history_summary": "A regional group dance using rhythmic footwork, gestures and clapping. Document local forms and festival contexts from district tourism and practitioner records.",
+          "image_query": "Malappuram Chavittukali Kerala folk dance",
+          "district_association": "Malappuram; local practice to verify",
+          "status": "documented_regional",
+          "history_detail": "A regional group dance using rhythmic footwork, gestures and clapping. Document local forms and festival contexts from district tourism and practitioner records.\n\nFurther historical context: Explain the group formation, movement vocabulary, music or rhythm, costume and occasions when it is performed. Identify the communities and local variants through practitioner or institutional sources.\n\nDistrict connection: Malappuram; local practice to verify. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Kathakali",
+          "malayalam_name": "കഥകളി",
+          "category": "Classical dance-drama",
+          "history_summary": "Kerala's classical dance-drama tradition. Malappuram has an important institutional connection through Kottakkal and P. S. V. Natya Sangham; do not describe the district as the origin of Kathakali.",
+          "image_query": "Kottakkal Kathakali PSV Natya Sangham performance",
+          "district_association": "Kottakkal institutional connection",
+          "status": "documented_institutional",
+          "history_detail": "Kerala's classical dance-drama tradition. Malappuram has an important institutional connection through Kottakkal and P. S. V. Natya Sangham; do not describe the district as the origin of Kathakali.\n\nFurther historical context: Explain the form's narrative structure, music, gesture, costume, makeup and training tradition. If the district is associated with an institution or troupe, describe that as an institutional connection rather than claiming the district is the art form's origin.\n\nDistrict connection: Kottakkal institutional connection. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "P. S. V. Natya Sangham",
+          "locality": "Kottakkal",
+          "type": "Performing arts institution",
+          "note": "Associated with Kathakali and the cultural legacy of P. S. Warrier."
+        },
+        {
+          "name": "Thunchan Memorial",
+          "locality": "Tirur",
+          "type": "Literary heritage centre",
+          "note": "Associated with Thunchath Ezhuthachan and Malayalam literary heritage."
+        },
+        {
+          "name": "Kottakkal Arya Vaidya Sala",
+          "locality": "Kottakkal",
+          "type": "Ayurveda institution",
+          "note": "Founded in 1902 by P. S. Warrier; heritage and institutional visit details should be checked."
+        },
+        {
+          "name": "Mamankam monuments",
+          "locality": "Thirunavaya",
+          "type": "Historical heritage site",
+          "note": "Historic remains associated with the medieval Mamankam gathering."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Malappuram using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    },
+    {
+      "district_no": 11,
+      "name": "Kozhikode",
+      "malayalam_name": "കോഴിക്കോട്",
+      "tagline": "Heritage of Mappilappattu, maritime trade and Malabar culture",
+      "overview": "Kozhikode's heritage reflects its historic role in Indian Ocean trade, Mappila music and performance traditions, northern Kerala ritual arts and the boat-building community of Beypore.",
+      "art_forms": [
+        {
+          "name": "Mappilappattu",
+          "malayalam_name": "മാപ്പിളപ്പാട്ട്",
+          "category": "Song tradition",
+          "history_summary": "A rich song tradition of the Mappila community, shaped by Malayalam, Arabic and local cultural influences. Document genres, poets and historical contexts with reliable music and literary sources.",
+          "image_query": "Mappilappattu traditional singer Malabar Kerala",
+          "district_association": "Malabar, including Kozhikode",
+          "status": "documented",
+          "history_detail": "A rich song tradition of the Mappila community, shaped by Malayalam, Arabic and local cultural influences. Document genres, poets and historical contexts with reliable music and literary sources.\n\nFurther historical context: Explain the language, poetic forms, musical influences, themes and social settings associated with the song tradition. Distinguish documented historical influences from later interpretations.\n\nDistrict connection: Malabar, including Kozhikode. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Oppana",
+          "malayalam_name": "ഒപ്പന",
+          "category": "Mappila folk dance",
+          "history_summary": "A celebratory group dance associated especially with Mappila weddings, accompanied by Mappilappattu and rhythmic clapping.",
+          "image_query": "Kozhikode Oppana Mappila dance traditional performers",
+          "district_association": "Malabar; local groups to verify",
+          "status": "documented_regional",
+          "history_detail": "A celebratory group dance associated especially with Mappila weddings, accompanied by Mappilappattu and rhythmic clapping.\n\nFurther historical context: Place the form within the cultural history of Kerala's Mappila communities. Explain its songs, rhythm, social occasions, costume and community setting, using sources from practitioners and cultural institutions.\n\nDistrict connection: Malabar; local groups to verify. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Kolkali",
+          "malayalam_name": "കോൽക്കളി",
+          "category": "Folk dance",
+          "history_summary": "A rhythmic group dance using wooden sticks and coordinated formations, documented among Malabar folk traditions.",
+          "image_query": "Kozhikode Malabar Kolkali folk performance",
+          "district_association": "Kozhikode and northern Malabar",
+          "status": "documented",
+          "history_detail": "A rhythmic group dance using wooden sticks and coordinated formations, documented among Malabar folk traditions.\n\nFurther historical context: Explain the group formation, movement vocabulary, music or rhythm, costume and occasions when it is performed. Identify the communities and local variants through practitioner or institutional sources.\n\nDistrict connection: Kozhikode and northern Malabar. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Thirayattam",
+          "malayalam_name": "തിറയാട്ടം",
+          "category": "Ritual performance",
+          "history_summary": "A ritual performance tradition found in northern Kerala, involving distinctive costumes, music and ritual enactment. Explain its forms and local contexts only with specific source evidence.",
+          "image_query": "Thirayattam Kerala ritual folk performance north Malabar",
+          "district_association": "Northern Kozhikode and Malabar; exact localities to verify",
+          "status": "documented_regional",
+          "history_detail": "A ritual performance tradition found in northern Kerala, involving distinctive costumes, music and ritual enactment. Explain its forms and local contexts only with specific source evidence.\n\nFurther historical context: Describe the local ritual context, costume, music, movement and the role of participating communities. Distinguish this form from similarly named traditions and verify the exact local variant.\n\nDistrict connection: Northern Kozhikode and Malabar; exact localities to verify. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Beypore Uru boat building",
+          "malayalam_name": "ബേപ്പൂർ ഉരു നിർമ്മാണം",
+          "category": "Traditional boat craft",
+          "history_summary": "Beypore is known for traditional wooden dhow construction by skilled shipwrights. Document timber selection, joinery, craft knowledge and contemporary artisan communities; distinguish heritage claims from unverified age claims.",
+          "image_query": "Beypore uru traditional wooden dhow boat shipbuilding artisans",
+          "district_association": "Beypore, Kozhikode",
+          "status": "documented",
+          "history_detail": "Beypore is known for traditional wooden dhow construction by skilled shipwrights. Document timber selection, joinery, craft knowledge and contemporary artisan communities; distinguish heritage claims from unverified age claims.\n\nFurther historical context: Describe the vessel's function, timber and construction knowledge, craft workers and maritime context. Distinguish documented history from promotional claims about age or origin.\n\nDistrict connection: Beypore, Kozhikode. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "Beypore Uru shipbuilding yards",
+          "locality": "Beypore",
+          "type": "Craft cluster",
+          "note": "Traditional wooden boat building; arrange access with active yards and respect worksite safety."
+        },
+        {
+          "name": "Kozhikode SM Street heritage area",
+          "locality": "Kozhikode city",
+          "type": "Historic commercial precinct",
+          "note": "Historic trade and food culture; not an art-form performance venue."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Kozhikode using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    },
+    {
+      "district_no": 12,
+      "name": "Wayanad",
+      "malayalam_name": "വയനാട്",
+      "tagline": "Heritage of indigenous communities, nature and ancient settlements",
+      "overview": "Wayanad's cultural heritage includes distinct indigenous communities, oral traditions, ecological knowledge, bamboo craft and archaeological sites. Content should be developed with community participation and consent.",
+      "art_forms": [
+        {
+          "name": "Paniya community song and dance traditions",
+          "malayalam_name": "പണിയ സമൂഹത്തിന്റെ പാട്ടും നൃത്തവും",
+          "category": "Indigenous community tradition",
+          "history_summary": "Document specific Paniya songs, dances, occasions and meanings with community-led sources. Avoid treating all Adivasi communities as one culture or publishing restricted ritual knowledge.",
+          "image_query": "Wayanad Paniya community traditional dance performance with consent",
+          "district_association": "Wayanad; exact community and locality require verification",
+          "status": "community_verification_required",
+          "history_detail": "Document specific Paniya songs, dances, occasions and meanings with community-led sources. Avoid treating all Adivasi communities as one culture or publishing restricted ritual knowledge.\n\nFurther historical context: Use community-led sources to explain the specific song, dance, occasion and meaning. Confirm terminology with community members and obtain informed consent before publishing recordings or images.\n\nDistrict connection: Wayanad; exact community and locality require verification. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Needs community or locality verification",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Kuruma community craft traditions",
+          "malayalam_name": "കുറുമ സമൂഹത്തിന്റെ കരകൗശല പാരമ്പര്യം",
+          "category": "Indigenous craft",
+          "history_summary": "Document specific Kuruma craft practices, materials, makers and contemporary status through community-approved interviews and reliable sources.",
+          "image_query": "Wayanad Kuruma traditional craft artisan bamboo work with consent",
+          "district_association": "Wayanad; exact community and locality require verification",
+          "status": "community_verification_required",
+          "history_detail": "Document specific Kuruma craft practices, materials, makers and contemporary status through community-approved interviews and reliable sources.\n\nFurther historical context: Describe the specific community's materials, techniques, uses and contemporary practice only after community verification. Avoid assigning a craft to an entire community based on a single example.\n\nDistrict connection: Wayanad; exact community and locality require verification. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Needs community or locality verification",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Bamboo craft",
+          "malayalam_name": "മുള കരകൗശലം",
+          "category": "Traditional craft",
+          "history_summary": "Bamboo is used in Wayanad for household objects, baskets and other products. Thrikkaipetta is listed as a rural art hub for bamboo products; confirm current artisan activity.",
+          "image_query": "Thrikkaipetta Wayanad bamboo craft Uravu artisans weaving",
+          "district_association": "Thrikkaipetta and Wayanad craft communities",
+          "status": "documented_craft_cluster",
+          "history_detail": "Bamboo is used in Wayanad for household objects, baskets and other products. Thrikkaipetta is listed as a rural art hub for bamboo products; confirm current artisan activity.\n\nFurther historical context: Explain the materials, tools, stages of making and the knowledge passed between makers. Include current livelihood context and identify the specific village or cooperative associated with the record.\n\nDistrict connection: Thrikkaipetta and Wayanad craft communities. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "Uravu Indigenous Science and Technology Study Centre",
+          "locality": "Thrikkaipetta",
+          "type": "Craft and community enterprise",
+          "note": "Known for bamboo-based craft and livelihood initiatives; verify current visitor programmes."
+        },
+        {
+          "name": "Edakkal Caves",
+          "locality": "Ambukuthi Hills, Wayanad",
+          "type": "Archaeological heritage site",
+          "note": "Prehistoric engravings and archaeological heritage; not a performance venue."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Wayanad using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    },
+    {
+      "district_no": 13,
+      "name": "Kannur",
+      "malayalam_name": "കണ്ണൂർ",
+      "tagline": "Land of Theyyam, martial traditions and handloom",
+      "overview": "Kannur's heritage is closely connected with North Malabar ritual performance, Theyyam, folk traditions, martial arts, handloom weaving and historic coastal settlements.",
+      "art_forms": [
+        {
+          "name": "Theyyam",
+          "malayalam_name": "തെയ്യം",
+          "category": "Ritual art",
+          "history_summary": "A ritual performance tradition of North Malabar in which performers embody divine and heroic figures through dance, music, elaborate makeup and headgear. It is community-centred and usually tied to seasonal temple or shrine calendars.",
+          "image_query": "Kannur Theyyam performer elaborate red face paint headgear ritual",
+          "district_association": "Kannur and North Malabar",
+          "status": "documented",
+          "history_detail": "A ritual performance tradition of North Malabar in which performers embody divine and heroic figures through dance, music, elaborate makeup and headgear. It is community-centred and usually tied to seasonal temple or shrine calendars.\n\nFurther historical context: Explain the tradition as a community-centred ritual practice, including its local shrine context, performer preparation, costume, music and seasonal calendar. Respect restrictions on photography, access and representation.\n\nDistrict connection: Kannur and North Malabar. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Thira",
+          "malayalam_name": "തിറ",
+          "category": "Ritual performance",
+          "history_summary": "A ritual performance tradition found in northern Kerala, with distinctive costumes, rhythmic movement and local shrine contexts. Explain its relationship to other ritual forms carefully and avoid treating all Thira variants as identical.",
+          "image_query": "Kannur Thira ritual performance Kerala costume",
+          "district_association": "North Malabar; specific locality and form to verify",
+          "status": "documented_regional",
+          "history_detail": "A ritual performance tradition found in northern Kerala, with distinctive costumes, rhythmic movement and local shrine contexts. Explain its relationship to other ritual forms carefully and avoid treating all Thira variants as identical.\n\nFurther historical context: Describe the local ritual context, costume, music, movement and the role of participating communities. Distinguish this form from similarly named traditions and verify the exact local variant.\n\nDistrict connection: North Malabar; specific locality and form to verify. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Poorakkali",
+          "malayalam_name": "പൂരക്കളി",
+          "category": "Folk dance",
+          "history_summary": "A traditional group performance of North Malabar, often associated with temple festivals and a circular formation. It combines rhythmic movement, songs and traditional knowledge.",
+          "image_query": "Kannur Poorakkali traditional men dance circle Kerala",
+          "district_association": "Kannur and Kasaragod; local forms to verify",
+          "status": "documented_regional",
+          "history_detail": "A traditional group performance of North Malabar, often associated with temple festivals and a circular formation. It combines rhythmic movement, songs and traditional knowledge.\n\nFurther historical context: Explain the group formation, movement vocabulary, music or rhythm, costume and occasions when it is performed. Identify the communities and local variants through practitioner or institutional sources.\n\nDistrict connection: Kannur and Kasaragod; local forms to verify. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Kolkali",
+          "malayalam_name": "കോൽക്കളി",
+          "category": "Folk dance",
+          "history_summary": "A rhythmic stick dance performed in group formations. Malabar styles include coordinated patterns and rapid changes in rhythm.",
+          "image_query": "Kannur Kolkali stick dance performers",
+          "district_association": "North Malabar",
+          "status": "documented_regional",
+          "history_detail": "A rhythmic stick dance performed in group formations. Malabar styles include coordinated patterns and rapid changes in rhythm.\n\nFurther historical context: Explain the group formation, movement vocabulary, music or rhythm, costume and occasions when it is performed. Identify the communities and local variants through practitioner or institutional sources.\n\nDistrict connection: North Malabar. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Cannanore handloom",
+          "malayalam_name": "കണ്ണൂർ കൈത്തറി",
+          "category": "Traditional craft",
+          "history_summary": "Kannur is associated with handloom textiles and home furnishings. Document the weaving clusters, designs, cooperative history and GI-linked products using artisan and official sources.",
+          "image_query": "Kannur Cannanore handloom weaving traditional textile artisan",
+          "district_association": "Kannur",
+          "status": "documented_craft",
+          "history_detail": "Kannur is associated with handloom textiles and home furnishings. Document the weaving clusters, designs, cooperative history and GI-linked products using artisan and official sources.\n\nFurther historical context: Explain the materials, tools, stages of making and the knowledge passed between makers. Include current livelihood context and identify the specific village or cooperative associated with the record.\n\nDistrict connection: Kannur. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "Muzhappilangad and nearby Theyyam heritage shrines",
+          "locality": "Specific shrine to be confirmed",
+          "type": "Seasonal ritual venue",
+          "note": "Only add individual Theyyam shrines after verifying the calendar and community access."
+        },
+        {
+          "name": "Kunhimangalam bronze craft cluster",
+          "locality": "Kunhimangalam",
+          "type": "Craft cluster",
+          "note": "Traditional bronze craft; verify active artisan workshops."
+        },
+        {
+          "name": "Kannur handloom clusters",
+          "locality": "Kannur district; exact cluster to be confirmed",
+          "type": "Craft cluster",
+          "note": "Add cooperative or artisan-workshop pins after verification."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Kannur using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    },
+    {
+      "district_no": 14,
+      "name": "Kasaragod",
+      "malayalam_name": "കാസർഗോഡ്",
+      "tagline": "Heritage of Theyyam, Yakshagana and coastal traditions",
+      "overview": "Kasaragod's cultural landscape reflects the meeting of Malayalam, Tulu and Kannada-speaking communities, North Malabar ritual arts, Yakshagana, handloom and coastal heritage.",
+      "art_forms": [
+        {
+          "name": "Theyyam",
+          "malayalam_name": "തെയ്യം",
+          "category": "Ritual art",
+          "history_summary": "A North Malabar ritual art in which performers embody divine and heroic figures through elaborate costume, makeup, music and dance. Document the local shrine's own form and festival calendar.",
+          "image_query": "Kasaragod Theyyam ritual performer Kerala",
+          "district_association": "Kasaragod and North Malabar",
+          "status": "documented",
+          "history_detail": "A North Malabar ritual art in which performers embody divine and heroic figures through elaborate costume, makeup, music and dance. Document the local shrine's own form and festival calendar.\n\nFurther historical context: Explain the tradition as a community-centred ritual practice, including its local shrine context, performer preparation, costume, music and seasonal calendar. Respect restrictions on photography, access and representation.\n\nDistrict connection: Kasaragod and North Malabar. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Yakshagana",
+          "malayalam_name": "യക്ഷഗാനം",
+          "category": "Dance-drama",
+          "history_summary": "A vibrant dance-drama tradition of the coastal Karnataka region, also present in the cultural life of Kasaragod's Kannada- and Tulu-speaking communities. Explain local variants and cross-border context accurately.",
+          "image_query": "Kasaragod Yakshagana colourful costume performance",
+          "district_association": "Kasaragod and adjoining coastal Karnataka cultural region",
+          "status": "documented_regional",
+          "history_detail": "A vibrant dance-drama tradition of the coastal Karnataka region, also present in the cultural life of Kasaragod's Kannada- and Tulu-speaking communities. Explain local variants and cross-border context accurately.\n\nFurther historical context: Explain the combination of acting, dance, music, costume, makeup and narrative. Where the form crosses state or language borders, describe the shared cultural region rather than assigning an exclusive district origin.\n\nDistrict connection: Kasaragod and adjoining coastal Karnataka cultural region. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Poorakkali",
+          "malayalam_name": "പൂരക്കളി",
+          "category": "Folk dance",
+          "history_summary": "A North Malabar group performance associated with festival settings, combining songs, rhythmic movement and circular formations. Record local practice with practitioner sources.",
+          "image_query": "Kasaragod Poorakkali folk dance traditional performance",
+          "district_association": "Kasaragod and Kannur",
+          "status": "documented_regional",
+          "history_detail": "A North Malabar group performance associated with festival settings, combining songs, rhythmic movement and circular formations. Record local practice with practitioner sources.\n\nFurther historical context: Explain the group formation, movement vocabulary, music or rhythm, costume and occasions when it is performed. Identify the communities and local variants through practitioner or institutional sources.\n\nDistrict connection: Kasaragod and Kannur. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        },
+        {
+          "name": "Kasaragod handloom",
+          "malayalam_name": "കാസർഗോഡ് കൈത്തറി",
+          "category": "Traditional craft",
+          "history_summary": "Kasaragod is associated with a recognised handloom saree tradition. Document local weaving methods, designs, artisan communities and GI details from official records.",
+          "image_query": "Kasaragod saree handloom weaving artisan Kerala",
+          "district_association": "Kasaragod",
+          "status": "documented_craft",
+          "history_detail": "Kasaragod is associated with a recognised handloom saree tradition. Document local weaving methods, designs, artisan communities and GI details from official records.\n\nFurther historical context: Explain the materials, tools, stages of making and the knowledge passed between makers. Include current livelihood context and identify the specific village or cooperative associated with the record.\n\nDistrict connection: Kasaragod. Treat this as a geographic association, not automatically as proof of origin. Where the tradition is practised across multiple districts, show those relationships transparently.",
+          "cultural_significance": "Explain why this tradition matters to the people who practise and sustain it: its role in community identity, festivals, worship, storytelling, artistic training, local livelihoods or the transmission of knowledge between generations. Use practitioner and community voices wherever possible; do not invent beliefs or meanings.",
+          "history_sections": [
+            "Historical background",
+            "Community and regional context",
+            "Performance or making process",
+            "Costume, instruments and materials",
+            "Cultural significance today",
+            "How the tradition is sustained",
+            "Sources and further reading"
+          ],
+          "editorial_status": "Starter history – source review required",
+          "image_upload_fields": [
+            "image_file",
+            "caption",
+            "alt_text",
+            "photographer",
+            "source_url",
+            "licence",
+            "district_locality",
+            "art_form_id",
+            "verification_status"
+          ]
+        }
+      ],
+      "places": [
+        {
+          "name": "Bekal Fort",
+          "locality": "Bekal",
+          "type": "Historic fort",
+          "note": "Major coastal heritage site; not an art-form performance venue."
+        },
+        {
+          "name": "Nileshwaram cultural heritage area",
+          "locality": "Nileshwaram",
+          "type": "Cultural heritage area",
+          "note": "North Malabar cultural traditions; add performance venues only after confirming local calendars."
+        },
+        {
+          "name": "Kasaragod handloom cluster",
+          "locality": "Exact cooperative or village to be confirmed",
+          "type": "Craft cluster",
+          "note": "Verify active weaving locations and visitor access before adding a map pin."
+        }
+      ],
+      "history_editorial_note": "Expand the history of Kasaragod using district-specific records, Kerala Tourism, recognised cultural institutions, academic publications and interviews with practitioners. Separate documented facts, oral histories, legends and contemporary descriptions. Do not publish an origin claim, venue, performance schedule or visitor-access statement unless the supporting source establishes it."
+    }
+  ],
+  "history_source_guidance": [
+    {
+      "name": "Kerala Tourism – Art Forms",
+      "url": "https://www.keralatourism.org/artforms/",
+      "use": "Official tourism reference for art-form descriptions and images; check image reuse terms separately."
+    },
+    {
+      "name": "Kerala Tourism – Districts",
+      "url": "https://www.keralatourism.org/districts/",
+      "use": "District context and official destination information."
+    },
+    {
+      "name": "Tusk Travel – Popular Art and Dance Forms in Kerala",
+      "url": "https://www.tusktravel.com/blog/most-popular-art-and-dance-forms-in-kerala/",
+      "use": "Secondary reading and discovery only; corroborate historical claims with stronger sources."
+    },
+    {
+      "name": "Wikipedia – Arts of Kerala",
+      "url": "https://en.wikipedia.org/wiki/Arts_of_Kerala",
+      "use": "Starting point for discovery and references; verify claims against cited primary or scholarly sources."
+    }
+  ]
+}

@@ -6,222 +6,161 @@
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![Django 6.0](https://img.shields.io/badge/Django-6.0-green.svg)](https://www.djangoproject.com/)
 [![React 18](https://img.shields.io/badge/React-18-61dafb.svg)](https://react.dev/)
+[![Three.js](https://img.shields.io/badge/Three.js-3D%20Nalukettu-orange.svg)](https://threejs.org/)
 [![Leaflet](https://img.shields.io/badge/Leaflet-GeoJSON-brightgreen.svg)](https://leafletjs.com/)
 [![Gemini AI](https://img.shields.io/badge/AI-Gemini%20Grounded-purple.svg)](https://ai.google.dev/)
 
 ---
 
-### 🌟 Project Mission & Hackathon Scope
+### 🌟 Project Mission & Cultural Scope
 
 **OORVEX** is an immersive, AI-powered cultural heritage discovery and geographical mapping platform dedicated to the living cultural traditions of Kerala, India.
 
-- **Primary Problem Statement:** **PS-05 – Discovery & Mapping: The Living Culture Map**
-- **Supporting Problem Statement:** **PS-04 – Language & Accessibility: Culture in Every Voice**
-- **Hackathon Theme:** *Traditional in Expression. Contemporary in Layout. Functional in Interaction.*
+It functions as an interactive digital cultural museum where visitors can select any district on an interactive map, discover documented traditional art forms, explore their history through authentic photographs, understand their cultural importance, and discover real places connected to those traditions.
 
-OORVEX bridges generational knowledge gaps by unifying geographical district exploration, verified performing and ritual art archives, master craft traditions, bilingual documentation (English and Malayalam), a strict retrieval-grounded AI assistant (CultureMatch AI), and a community heritage contribution pipeline.
-
----
-
-## 🏛️ Key Feature Modules
-
-### P0 – Essential MVP
-1. **Cinematic Responsive Homepage**: Ambient lighting, Three.js 3D golden ember particle constellation, traditional Kerala aesthetics, and dynamic statistics.
-2. **Interactive Kerala Map (All 14 Districts)**: Functional Leaflet and OpenStreetMap integration rendering accurate GeoJSON boundaries, district hover highlights, cultural location pins, category filtering, search, and fly-to navigation.
-3. **District-Wise Cultural Explorer (All 14 Districts)**: Dedicated pages for Kasaragod, Kannur, Wayanad, Kozhikode, Malappuram, Palakkad, Thrissur, Ernakulam, Idukki, Kottayam, Alappuzha, Pathanamthitta, Kollam, and Thiruvananthapuram.
-4. **Cultural Database with Sourced Records**: Performing arts (Theyyam, Kathakali, Padayani, Mudiyettu, Chavittu Nadakam, Tholpavakoothu, Oppana, Margamkali) and master crafts (Aranmula Kannadi, Beypore Uru, Balaramapuram Handloom, Chundan Vallam, Marayoor Jaggery).
-5. **Search & Multi-Category Filters**: Filter by performing arts, ritual arts, classical arts, folk dances, traditional music, crafts, and heritage places.
-6. **Individual Heritage Detail Pages**: High-resolution authentic photography, photographer attribution, English/Malayalam descriptions, cultural stories/legends, historical background, cultural significance, and source references.
-7. **CultureMatch AI Cultural Guide**: Powered by Google Gemini via Django backend. Employs strict retrieval-grounded generation—only recommends verified database records, returns genuine listing IDs, provides verifiable archival citations, and never hallucinates dates or traditions.
-8. **Bilingual Experience (English & Malayalam)**: Instant toggle switching between English and Malayalam for interface labels, cultural titles, narratives, and phonetic guides.
-9. **Functional Django REST APIs**: 11 production endpoints with filtering, search, and moderation workflows.
-10. **Community Contribution System**: Allows public submissions with mandatory verification status (`PENDING` → `APPROVED` / `REJECTED`).
-
-### P1 – Enhancements
-1. **Cultural Glossary**: Searchable Malayalam cultural lexicon with English transliteration, cultural contexts, and Web Speech API audio pronunciation.
-2. **Accessibility Controls (WCAG 2.1 AA)**: Dynamic font size scaling (100%, 115%, 130%), high-contrast gold-and-black mode, reduced-motion toggle, and screen-voice assist.
-3. **Curator Moderation Dashboard**: Real-time admin portal to inspect pending submissions, view contributor notes, and approve (instantly publishing to the live map) or reject with feedback.
-
-### P2 – Explorer Passport
-1. **Kerala Cultural Explorer Passport**: Digital passport tracking districts explored out of 14, collecting digital heritage stamps, and unlocking explorer achievement badges (Cultural Wanderer, Cultural Adept, Heritage Grandmaster).
+- **Primary Research References**:
+  1. **Official Kerala Tourism**: `https://www.keralatourism.org/artforms/`
+  2. **Tusk Travel Cultural Guides**: `https://www.tusktravel.com/blog/most-popular-art-and-dance-forms-in-kerala/`
+  3. **Wikipedia & Wikimedia Commons – Arts of Kerala**: `https://en.wikipedia.org/wiki/Arts_of_Kerala`
 
 ---
 
-## 🏗️ Technical Architecture
+## 🎨 Ancient Kerala Visual Identity & Color Theme
 
+OORVEX implements an elegant, light Ancient Kerala visual identity with high contrast and respectful heritage motifs:
+
+| Role | Color | Hex Code | Visual Application |
+| :--- | :--- | :--- | :--- |
+| **Navbar** | Forest Green | `#405B43` | Top navigation bar and brand identity |
+| **Hero Section** | Deep Green | `#123B32` | 3D Nalukettu opening entrance backdrop |
+| **Page Canvas** | Warm Antique Ivory | `#F7F0DF` | Primary page background across all routes |
+| **Buttons & CTAs** | Kasavu Gold | `#C6A15B` | Action buttons, badges, highlights, and passport triggers |
+| **Art-Form Titles** | Forest Green | `#405B43` | Heading titles on cards and editorial dossiers |
+| **Cultural Highlights** | Mural Red / Terracotta | `#A64F32` | Locality markers, tags, and category highlights |
+| **Cards & Panels** | Card Ivory / White | `#FFFDF6` | Card panels, modal surfaces, and dossier dialogs |
+| **Footer** | Dark Green | `#0B2923` | Multi-column archival footer with gold inlay accents |
+
+---
+
+## 🚪 Cinematic 3D Homepage & Scroll-Based Storytelling
+
+1. **3D Nalukettu Opening Scene**:
+   - Built with Three.js rendering a traditional carved wooden entrance.
+   - Slowly opening wooden double doors with brass studs and knocker rings.
+   - Golden sunlight rays streaming into the entrance from a deep green backdrop (`#123B32`).
+   - Floating golden dust particles and atmospheric mist with mouse parallax.
+   - Smooth entrance prompt: **ENTER THE HERITAGE**.
+2. **Section 1 – Welcome to Kerala's Heritage**:
+   - Cinematic landscape introduction to Kerala's rainforests, rivers, and cultural continuity.
+3. **Section 2 – Explore the 14 Districts**:
+   - Interactive Leaflet cartography rendering all 14 district GeoJSON boundaries.
+   - Click-to-inspect district drawer with authentic cover photos, statistics, and quick cultural listings.
+4. **Section 3 – Discover the Art Forms**:
+   - Image-rich art form cards with authentic photography, EN/ML names, category pills, and Kasavu gold "View History" actions.
+5. **Section 4 – Living Traditions**:
+   - Cultural highlights of temple percussion (Chenda, Maddalam, Sopanam), natural pigments (*Mukhathezhuthu*), bronze metallurgy (Aranmula Kannadi), and dhow shipbuilding (Beypore Uru).
+6. **Section 5 – Explore Cultural Places**:
+   - Verified physical destinations (academies, sacred groves, practice Kalaris, annual festival venues) with addresses, seasonality schedules, and visitor etiquette.
+7. **Section 6 – Community & Archival Footer**:
+   - Dark green `#0B2923` footer with research citations, district quick-links, and curator portal.
+
+---
+
+## 🗺️ Complete User Experience: District to Art Form
+
+### STEP 1 – Select a District
+- Interactive map covering all 14 districts: Kasaragod, Kannur, Wayanad, Kozhikode, Malappuram, Palakkad, Thrissur, Ernakulam, Idukki, Kottayam, Alappuzha, Pathanamthitta, Kollam, and Thiruvananthapuram.
+- Selecting a district opens its dedicated dossier:
+  - English and Malayalam name
+  - Authentic district cover photograph with credits
+  - Cultural heritage introduction
+  - Documented art forms in that district
+  - Relevant crafts and traditional practices
+  - Actual places associated with these traditions
+
+### STEP 2 – Display District's Art Forms
+- Displays art forms as image cards with authentic photos (Theyyam depicts Theyyam, Padayani depicts Padayani, etc.).
+- Includes English name, Malayalam name, category, short description, locality association, and "View History" button.
+- Strictly maps art forms to their genuine districts based on historical evidence.
+
+### STEP 3 – Dedicated Art-Form Detail Page
+Clicking any art-form card opens a dedicated dossier with 7 structured sections:
+- **A. Art form introduction**: English & Malayalam names, category, short introduction, authentic photograph with photographer and license.
+- **B. History and origin**: Historical background, documented era/timeline, practitioner communities, and cultural influences.
+- **C. Cultural significance**: Religious, social, or cultural importance; distinguishes documented history from oral legends and folklore.
+- **D. Performance and artistic details**: Costumes (Vesham), makeup, musical instruments (Chenda, Maddalam, Elathalam, etc.), and techniques (Mudras, stances).
+- **E. Where to experience it**: Real locations with place name, district, venue type (permanent institution, practice location, seasonal festival venue), address, coordinates, and visitor access guidelines.
+- **F. Photo gallery**: Multiple authentic photographs with captions, photographer, original source URL, and license.
+- **G. Sources section**: Citations to Kerala Tourism, Sangeetha Nataka Akademi, and Wikipedia/Wikimedia with verification badges (`Verified`).
+
+---
+
+## 🏛️ Documented Traditions & Art Forms
+
+1. **Theyyam** (Kannur, Kasaragod) — Sacred grove ecstatic ritual dance
+2. **Thira / Thirayattam** (Kozhikode, Malappuram, Kannur) — Ancestral nocturnal spirit enactments
+3. **Poorakkali** (Kannur, Kasaragod) — 18-rhythm martial circle dance and Marathukali debate
+4. **Padayani** (Pathanamthitta, Kottayam, Kollam) — Areca spathe masked effigy rites at Kadammanitta
+5. **Kathakali** (Kollam, Thrissur, Ernakulam, Thiruvananthapuram) — Classical mudra dance-drama
+6. **Mohiniyattam** (Thrissur, Palakkad, Thiruvananthapuram) — Classical Lasya solo dance of the enchantress
+7. **Ottanthullal** (Palakkad, Thrissur, Alappuzha) — Kunchan Nambiar's solo poetic satire
+8. **Koodiyattam** (Thrissur, Ernakulam, Thiruvananthapuram) — UNESCO Sanskrit temple theatre
+9. **Mudiyettu** (Ernakulam, Thrissur) — UNESCO Kali-Darika ritual drama and Kalamezhuthu murals
+10. **Tholpavakoothu** (Palakkad, Malappuram, Thrissur) — Nila basin deerskin shadow puppetry
+11. **Oppana** (Malappuram, Kozhikode, Kannur) — Mappila bridal circle dance and hand-clapping songs
+12. **Margamkali** (Kottayam, Ernakulam, Thrissur) — St. Thomas Christian circular dance around brass lamp
+13. **Kalaripayattu** (Kozhikode, Kannur, Wayanad, Thiruvananthapuram) — Ancient battlefield martial art
+14. **Pulikali** (Thrissur) — Swaraj Round Onam painted tiger carnival
+15. **Arjuna Nritham** (Kottayam, Alappuzha) — Peacock-feather skirt ritual temple dance
+16. **Thiruvathirakali** (Thiruvananthapuram, Thrissur, Kottayam, Ernakulam) — Women's graceful circle dance
+17. **Aranmula Kannadi** (Pathanamthitta) — Sacred front-surface bronze alloy mirror
+18. **Beypore Uru** (Kozhikode) — Handcrafted wooden dhow shipbuilding by Khalasis
+19. **Balaramapuram Kasavu** (Thiruvananthapuram) — Pure gold-bordered pit-loom handloom
+
+---
+
+## 🗄️ Backend Data Architecture
+
+```python
+# Key Models in culture/models.py:
+- District(slug, name, name_ml, tagline, description_en, description_ml, headquarters, latitude, longitude, hero_image, image_credit, area_sq_km, order)
+- CulturalListing(title, title_ml, category, districts, origin_district, locality, description_en, description_ml, cultural_story, historical_background, cultural_significance, costumes, instruments, techniques, historical_timeline, communities, image, image_credit, source_reference, verification_status)
+- DistrictArtForm(district, art_form, locality, association_type, source_reference, verification_status)
+- CulturalPlace(name, district, locality, description, art_form, venue_type, address, latitude, longitude, visitor_access_information, source_reference)
+- ArtFormImage(art_form, district, image_url, caption, alt_text, photographer, source_url, licence, verification_status)
+- Contribution(contributor_name, contributor_email, title, category, district, description, image, source_reference, status)
+- Review(contribution, reviewer, decision, comments, reviewed_at)
+- CulturalGlossary(term_ml, transliteration, meaning_en, cultural_context, audio_phonetic)
 ```
-OORVEX/
-├── backend/
-│   ├── manage.py
-│   ├── oorvex_backend/          # Django project settings & root URLs
-│   │   ├── settings.py
-│   │   ├── urls.py
-│   │   └── wsgi.py
-│   ├── culture/                 # Cultural heritage Django app
-│   │   ├── models.py            # District, Category, CulturalListing, Contribution, Review, Glossary
-│   │   ├── serializers.py       # DRF Serializers
-│   │   ├── views.py             # 11 REST API views
-│   │   ├── urls.py              # API routes
-│   │   ├── ai_service.py        # Gemini retrieval-grounded AI pipeline
-│   │   ├── admin.py             # Django admin registration
-│   │   └── management/commands/
-│   │       └── seed_cultural_data.py # Seed data for all 14 districts
-│   ├── test_api_endpoints.py    # Automated test suite
-│   ├── requirements.txt
-│   └── .env.example
-├── frontend/
-│   ├── package.json
-│   ├── vite.config.js           # Vite config with manual chunk splitting
-│   ├── tailwind.config.js       # Heritage color palette & typography
-│   ├── index.html               # Fonts & Leaflet CSS
-│   └── src/
-│       ├── assets/
-│       │   └── kerala_districts.json # 14 Kerala districts GeoJSON polygons
-│       ├── components/
-│       │   ├── Navbar.jsx
-│       │   ├── Footer.jsx
-│       │   ├── Hero3DCanvas.jsx # Three.js 3D golden particle nebula
-│       │   ├── KeralaMap.jsx    # Interactive Leaflet map with GeoJSON
-│       │   ├── CultureMatchModal.jsx # Grounded AI assistant dialog
-│       │   ├── AccessibilityBar.jsx  # WCAG 2.1 AA controls
-│       │   ├── PassportDrawer.jsx    # Cultural Explorer Passport
-│       │   └── CulturalCard.jsx      # Heritage card component
-│       ├── context/
-│       │   ├── LanguageContext.jsx
-│       │   ├── AccessibilityContext.jsx
-│       │   └── PassportContext.jsx
-│       ├── pages/
-│       │   ├── Home.jsx
-│       │   ├── ExploreDistricts.jsx
-│       │   ├── DistrictDetail.jsx
-│       │   ├── CulturalListings.jsx
-│       │   ├── CulturalDetail.jsx
-│       │   ├── CraftsGallery.jsx
-│       │   ├── CulturalStories.jsx
-│       │   ├── GlossaryPage.jsx
-│       │   ├── ContributePage.jsx
-│       │   ├── AdminDashboard.jsx
-│       │   └── AboutPage.jsx
-│       ├── services/
-│       │   ├── api.js           # Axios client with fallback
-│       │   └── translations.js  # Bilingual EN/ML dictionary
-│       └── styles/
-│           └── index.css
-├── ARCHITECTURE.md
-├── LICENSE
-└── README.md
+
+---
+
+## 🚀 Running the Project
+
+### 1. Backend (Django REST Framework)
+```powershell
+cd backend
+# Run migrations
+python manage.py migrate
+
+# Seed verified cultural dataset
+python manage.py seed_cultural_data
+
+# Run automated tests
+python test_api_endpoints.py
+
+# Start Django development server
+python manage.py runserver 8000
 ```
 
----
+### 2. Frontend (Vite + React)
+```powershell
+cd frontend
+# Build for production
+npm run build
 
-## 🚀 Getting Started
+# Start frontend dev server
+npm run dev
+```
 
-### Prerequisites
-- Python 3.10+ (tested with Python 3.12)
-- Node.js 18+ & npm
-
----
-
-### Backend Setup (Django REST Framework)
-
-1. Open a terminal and navigate to the `backend` directory:
-   ```bash
-   cd backend
-   ```
-
-2. Copy `.env.example` to `.env`:
-   ```bash
-   cp .env.example .env
-   ```
-   *(Optional: Add your `GEMINI_API_KEY` from [Google AI Studio](https://aistudio.google.com/) for live Gemini retrieval-grounding. If omitted, the system seamlessly uses its deterministic grounded search pipeline!)*
-
-3. Run migrations and seed verified cultural records:
-   ```bash
-   python manage.py migrate
-   python manage.py seed_cultural_data
-   ```
-
-4. Run automated test suite:
-   ```bash
-   python test_api_endpoints.py
-   ```
-
-5. Start the backend development server:
-   ```bash
-   python manage.py runserver 8000
-   ```
-   The backend API will run at `http://127.0.0.1:8000/api/`.
-
----
-
-### Frontend Setup (React + Vite + Tailwind CSS)
-
-1. Open a second terminal and navigate to the `frontend` directory:
-   ```bash
-   cd frontend
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the Vite development server:
-   ```bash
-   npm run dev
-   ```
-   The application will be live at `http://localhost:5173`.
-
-4. To produce an optimized production build:
-   ```bash
-   npm run build
-   ```
-
----
-
-## 📡 REST API Documentation
-
-| Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/api/districts/` | List all 14 districts with listing statistics |
-| `GET` | `/api/districts/<slug>/` | Detailed district dossier and approved listings |
-| `GET` | `/api/categories/` | List cultural categories with counts |
-| `GET` | `/api/listings/` | Filter approved listings (`?district=`, `?category=`, `?search=`, `?featured=`) |
-| `GET` | `/api/listings/<id>/` | Individual listing dossier with historical context |
-| `GET` | `/api/glossary/` | Searchable Malayalam cultural lexicon (`?search=`) |
-| `POST` | `/api/contributions/` | Submit community heritage record for moderation |
-| `POST` | `/api/ai/discover/` | CultureMatch AI retrieval-grounded query |
-| `GET` | `/api/admin/contributions/` | Moderator view for contributions (`?status=pending`) |
-| `POST` | `/api/admin/contributions/<id>/approve/` | Approve submission & publish directly to map |
-| `POST` | `/api/admin/contributions/<id>/reject/` | Reject submission with curator comments |
-
----
-
-## 🎨 Visual Identity & Design System
-
-- **Deep Forest Green (`#102B24`)**: Reflects Kerala's lush Western Ghats and sacred groves (Kavus).
-- **Dark Emerald (`#071B17`)**: Museum-grade backdrop ensuring deep contrast.
-- **Antique Gold (`#D6B46A`)**: Evokes sacred bronze temple oil lamps (Nilavilakku) and Kasavu gold zari.
-- **Warm Ivory (`#F4EBD9`)**: Inspired by traditional unbleached cotton handlooms and mural murals.
-- **Typography**: Classical serif headings (*Cinzel*, *Playfair Display*, *Noto Serif Malayalam*) paired with clean sans body (*Plus Jakarta Sans*, *Manjari*).
-
----
-
-## 🛡️ Cultural Validation & Source References
-
-Every cultural listing in OORVEX references verified cultural archives:
-- **Kerala Sangeetha Nataka Akademi**
-- **Kerala Folklore Akademi**
-- **Kerala Kalamandalam Deemed University for Art and Culture**
-- **Archaeological Survey of India (ASI)**
-- **Geographical Indications (GI) Registry of India**
-- **Wikimedia Commons / Creative Commons licensing**
-
----
-
-## 👥 Team
-- Hackathon Project for Cultural Heritage & Discovery (PS-05, PS-04).
-- Built with pride for Kerala's living traditions.
-
-## 📄 License
-This project is open-source under the [MIT License](LICENSE).
+Open `http://localhost:5173` in your browser.

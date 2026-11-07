@@ -1,9 +1,17 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { MapPin, Sparkles, ExternalLink, ShieldCheck } from 'lucide-react';
+import { MapPin, Sparkles, ExternalLink, ShieldCheck, ArrowRight } from 'lucide-react';
 
-export default function CulturalCard({ listing, onNavigate }) {
+export default function CulturalCard({ listing, onNavigate, onClick, onDistrictClick }) {
   const { language, t } = useLanguage();
+
+  const handleCardClick = () => {
+    if (onClick) {
+      onClick();
+    } else if (onNavigate) {
+      onNavigate(`/cultural-listings/${listing.id}`);
+    }
+  };
 
   const title = language === 'ml' ? (listing.title_ml || listing.title) : listing.title;
   const description = language === 'ml' ? (listing.description_ml || listing.description_en) : listing.description_en;
@@ -11,67 +19,80 @@ export default function CulturalCard({ listing, onNavigate }) {
 
   return (
     <div
-      onClick={() => onNavigate(`/cultural-listings/${listing.id}`)}
-      className="group relative rounded-2xl overflow-hidden glass-panel border border-heritage-gold/25 hover:border-heritage-gold shadow-lg hover:shadow-gold-glow transition-all duration-300 cursor-pointer flex flex-col justify-between"
+      onClick={handleCardClick}
+      className="group relative rounded-2xl overflow-hidden bg-[#FFFCF5] border border-[#C9A45C]/35 hover:border-[#31543E] shadow-nalukettu hover:shadow-nalukettu-lg transition-all duration-300 cursor-pointer flex flex-col justify-between"
     >
       <div>
-        {/* Image & Image Credit Overlay */}
-        <div className="relative h-56 w-full overflow-hidden bg-heritage-dark">
+        {/* Authentic Art Form Image */}
+        <div className="relative h-56 w-full overflow-hidden bg-[#E8D8B8]">
           <img
             src={listing.image || 'https://images.unsplash.com/photo-1600100397608-f010f443b749?auto=format&fit=crop&w=800&q=80'}
             alt={listing.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-heritage-dark via-transparent to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
           
           {/* Category Tag */}
           <div className="absolute top-3 left-3">
-            <span className="px-2.5 py-1 rounded-full text-[10px] font-bold font-mono tracking-wider uppercase bg-heritage-dark/80 text-heritage-gold border border-heritage-gold/40 backdrop-blur-md">
+            <span className="px-3 py-1 rounded-full text-[10px] font-bold font-mono tracking-wider uppercase bg-[#FFFCF5]/95 text-[#31543E] border border-[#C9A45C]/50 shadow-sm backdrop-blur-sm">
               {language === 'ml' ? (listing.category?.name_ml || 'കല') : (listing.category?.name_en || 'Heritage')}
             </span>
           </div>
 
-          {/* Verification Badge */}
-          {listing.verification_status === 'approved' && (
-            <div className="absolute top-3 right-3 flex items-center space-x-1 px-2 py-0.5 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-500/40 text-[10px] font-medium backdrop-blur-md">
-              <ShieldCheck className="w-3 h-3 text-emerald-400" />
-              <span>Verified</span>
+          {/* Curator Verification Status Badge */}
+          {listing.curator_status === 'Verified' || listing.verification_status === 'approved' ? (
+            <div className="absolute top-3 right-3 flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-[#31543E] text-white text-[10px] font-medium shadow-sm">
+              <ShieldCheck className="w-3 h-3 text-[#C9A45C]" />
+              <span>Verified Record</span>
             </div>
-          )}
+          ) : listing.curator_status === 'Needs Review' ? (
+            <div className="absolute top-3 right-3 flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-[#B58A45] text-white text-[10px] font-medium shadow-sm">
+              <ShieldCheck className="w-3 h-3 text-white" />
+              <span>Needs Review</span>
+            </div>
+          ) : null}
 
-          {/* Photographer Attribution Notice */}
-          <div className="absolute bottom-1 right-2 bg-black/70 px-1.5 py-0.5 rounded text-[8px] text-heritage-ivory/60 font-mono">
-            {listing.image_credit || 'Wikimedia Commons'}
+          {/* Sourced Photographer & Licence Attribution */}
+          <div className="absolute bottom-1 right-2 bg-black/60 px-2 py-0.5 rounded text-[8px] text-white/80 font-mono">
+            {listing.image_credit || 'Wikimedia Commons / CC BY-SA'}
           </div>
         </div>
 
         {/* Content Details */}
         <div className="p-5 space-y-2.5">
-          <div className="flex items-center space-x-1.5 text-xs text-heritage-gold/90 font-medium">
-            <MapPin className="w-3.5 h-3.5 text-heritage-gold flex-shrink-0" />
+          {/* Cultural highlight in Mural Red */}
+          <div className="flex items-center space-x-1.5 text-xs text-[#9E4035] font-semibold">
+            <MapPin className="w-3.5 h-3.5 text-[#9E4035] flex-shrink-0" />
             <span className="truncate">{listing.locality || distNames}</span>
           </div>
 
-          <h3 className="font-serif font-bold text-lg text-heritage-ivory group-hover:text-gold-gradient transition-colors line-clamp-1">
+          {/* Art-form Title in Forest Green */}
+          <h3 className="font-serif font-bold text-lg text-[#31543E] group-hover:text-[#9E4035] transition-colors line-clamp-1">
             {title}
           </h3>
 
-          <p className="text-xs text-heritage-ivory/70 line-clamp-2 leading-relaxed">
+          <p className="text-xs text-[#2B1E16]/80 line-clamp-2 leading-relaxed font-sans">
             {description}
           </p>
         </div>
       </div>
 
-      {/* Card Footer */}
-      <div className="px-5 pb-5 pt-2 border-t border-heritage-gold/15 flex items-center justify-between text-xs">
-        <span className="text-[11px] text-heritage-ivory/50 font-mono">
-          Districts: {distNames}
+      {/* Card Action Footer with Kasavu Gold 'View History' Button */}
+      <div className="px-5 pb-5 pt-3 border-t border-[#C9A45C]/20 flex items-center justify-between text-xs bg-[#F6F0E4]/60">
+        <span className="text-[11px] text-[#2B1E16]/70 font-serif">
+          {distNames}
         </span>
-        <span className="text-heritage-gold font-semibold flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
-          <span>{language === 'ml' ? 'കൂടുതൽ അറിയാം' : 'Explore'}</span>
-          <ExternalLink className="w-3.5 h-3.5" />
-        </span>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            handleCardClick();
+          }}
+          className="px-3.5 py-1.5 rounded-xl bg-[#C9A45C] hover:bg-[#B28E46] text-[#103B30] font-sans font-bold text-xs flex items-center space-x-1.5 shadow-kasavu transition-all"
+        >
+          <span>{language === 'ml' ? 'ചരിത്രം കാണാം' : 'View History'}</span>
+          <ArrowRight className="w-3 h-3 text-[#103B30]" />
+        </button>
       </div>
     </div>
   );

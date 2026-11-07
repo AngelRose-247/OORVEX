@@ -14,7 +14,7 @@ def retrieve_relevant_records(query: str, district_slug: str = None, category_sl
     """
     Step 1 & 2: Intent-aware search against approved cultural database records.
     """
-    qs = CulturalListing.objects.filter(verification_status='approved').prefetch_related('districts', 'category')
+    qs = CulturalListing.objects.filter(curator_status='Verified').prefetch_related('districts', 'category')
 
     if district_slug:
         qs = qs.filter(districts__slug=district_slug)

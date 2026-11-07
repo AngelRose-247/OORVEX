@@ -49,7 +49,6 @@ export default function ContributePage({ districts = [], categories = [] }) {
     setSuccessMessage('');
 
     try {
-      // Find category and district IDs/slugs
       const payload = {
         contributor_name: formData.contributor_name,
         contributor_email: formData.contributor_email,
@@ -93,50 +92,50 @@ export default function ContributePage({ districts = [], categories = [] }) {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10 bg-heritage-ivory">
       
       {/* Header */}
       <div className="text-center space-y-3 max-w-2xl mx-auto">
-        <div className="inline-flex p-3 rounded-full bg-heritage-gold/20 text-heritage-gold border border-heritage-gold/30">
-          <HeartHandshake className="w-6 h-6" />
+        <div className="inline-flex p-3 rounded-full bg-heritage-palm text-heritage-maroon border border-heritage-gold/50 shadow-sm">
+          <HeartHandshake className="w-6 h-6 text-heritage-terracotta" />
         </div>
-        <h1 className="font-serif font-black text-4xl sm:text-5xl text-gold-gradient">
+        <h1 className="font-serif font-black text-4xl sm:text-5xl text-heritage-maroon">
           {t.contributeTitle}
         </h1>
-        <p className="text-sm text-heritage-ivory/70 leading-relaxed">
+        <p className="text-sm text-heritage-timber/80 leading-relaxed font-normal">
           {t.contributeSubtitle}
         </p>
       </div>
 
       {/* Moderation Workflow Notice */}
-      <div className="p-4 rounded-2xl bg-heritage-forest/60 border border-heritage-gold/30 flex items-start space-x-3 text-xs text-heritage-ivory/80">
-        <ShieldCheck className="w-5 h-5 text-heritage-gold flex-shrink-0 mt-0.5" />
+      <div className="p-5 rounded-3xl bg-[#FFFBF2] border-2 border-heritage-gold/40 shadow-nalukettu flex items-start space-x-3 text-xs text-heritage-timber/85 leading-relaxed">
+        <ShieldCheck className="w-5 h-5 text-heritage-templeGreen flex-shrink-0 mt-0.5" />
         <div>
-          <strong className="text-heritage-gold">Curator Verification Workflow:</strong> All community contributions enter a <code>PENDING</code> moderation queue. Once reviewed for cultural authenticity and licensing by the moderation committee, approved listings appear immediately on the public map and CultureMatch AI.
+          <strong className="text-heritage-maroon font-serif font-bold">Curator Verification Workflow:</strong> All community contributions enter a <code>PENDING</code> moderation queue. Once reviewed for cultural authenticity and licensing by the curation committee, approved listings appear immediately on the public map and CultureMatch AI.
         </div>
       </div>
 
       {successMessage && (
-        <div className="p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-200 text-xs flex items-center space-x-2 animate-fadeIn">
-          <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+        <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs flex items-center space-x-2 animate-fadeIn shadow-sm">
+          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
           <span>{successMessage}</span>
         </div>
       )}
 
       {errorMessage && (
-        <div className="p-4 rounded-xl bg-red-950/80 border border-red-500/50 text-red-200 text-xs flex items-center space-x-2 animate-fadeIn">
-          <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
+        <div className="p-4 rounded-2xl bg-red-50 border border-red-300 text-red-800 text-xs flex items-center space-x-2 animate-fadeIn shadow-sm">
+          <AlertCircle className="w-4 h-4 text-red-600 flex-shrink-0" />
           <span>{errorMessage}</span>
         </div>
       )}
 
       {/* Submission Form */}
-      <form onSubmit={handleSubmit} className="p-6 sm:p-10 rounded-3xl glass-panel border border-heritage-gold/30 space-y-6">
+      <form onSubmit={handleSubmit} className="p-6 sm:p-10 rounded-3xl bg-[#FFFBF2] border-2 border-heritage-gold/40 shadow-nalukettu space-y-6">
         
         {/* Contributor Identity */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1.5">
-            <label className="text-xs font-bold text-heritage-gold uppercase tracking-wider">
+            <label className="text-xs font-serif font-bold text-heritage-maroon uppercase tracking-wider">
               {t.yourName} *
             </label>
             <input
@@ -146,12 +145,12 @@ export default function ContributePage({ districts = [], categories = [] }) {
               value={formData.contributor_name}
               onChange={handleChange}
               placeholder="e.g. Anand K. Marar / Folk Arts Society"
-              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-forest/60 border border-heritage-gold/30 text-heritage-ivory text-xs focus:border-heritage-gold focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-ivory border border-heritage-gold/50 text-heritage-timber text-xs focus:border-heritage-terracotta focus:outline-none shadow-sm"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-xs font-bold text-heritage-gold uppercase tracking-wider">
+            <label className="text-xs font-serif font-bold text-heritage-maroon uppercase tracking-wider">
               {t.yourEmail}
             </label>
             <input
@@ -160,7 +159,7 @@ export default function ContributePage({ districts = [], categories = [] }) {
               value={formData.contributor_email}
               onChange={handleChange}
               placeholder="e.g. anand@example.com"
-              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-forest/60 border border-heritage-gold/30 text-heritage-ivory text-xs focus:border-heritage-gold focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-ivory border border-heritage-gold/50 text-heritage-timber text-xs focus:border-heritage-terracotta focus:outline-none shadow-sm"
             />
           </div>
         </div>
@@ -168,7 +167,7 @@ export default function ContributePage({ districts = [], categories = [] }) {
         {/* Titles (English & Malayalam) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1.5">
-            <label className="text-xs font-bold text-heritage-gold uppercase tracking-wider">
+            <label className="text-xs font-serif font-bold text-heritage-maroon uppercase tracking-wider">
               {t.titleEn} *
             </label>
             <input
@@ -178,12 +177,12 @@ export default function ContributePage({ districts = [], categories = [] }) {
               value={formData.title}
               onChange={handleChange}
               placeholder="e.g. Kakkarissi Natakam"
-              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-forest/60 border border-heritage-gold/30 text-heritage-ivory text-xs focus:border-heritage-gold focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-ivory border border-heritage-gold/50 text-heritage-timber text-xs focus:border-heritage-terracotta focus:outline-none shadow-sm"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-xs font-bold text-heritage-gold uppercase tracking-wider">
+            <label className="text-xs font-serif font-bold text-heritage-maroon uppercase tracking-wider">
               {t.titleMl}
             </label>
             <input
@@ -192,7 +191,7 @@ export default function ContributePage({ districts = [], categories = [] }) {
               value={formData.title_ml}
               onChange={handleChange}
               placeholder="e.g. കാക്കാരിശ്ശി നാടകം"
-              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-forest/60 border border-heritage-gold/30 text-heritage-ivory text-xs focus:border-heritage-gold focus:outline-none font-malayalam-text"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-ivory border border-heritage-gold/50 text-heritage-timber text-xs focus:border-heritage-terracotta focus:outline-none font-malayalam-text shadow-sm"
             />
           </div>
         </div>
@@ -200,14 +199,14 @@ export default function ContributePage({ districts = [], categories = [] }) {
         {/* Classification & Location */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="space-y-1.5">
-            <label className="text-xs font-bold text-heritage-gold uppercase tracking-wider">
+            <label className="text-xs font-serif font-bold text-heritage-maroon uppercase tracking-wider">
               {t.selectDistrict} *
             </label>
             <select
               name="district"
               value={formData.district}
               onChange={handleChange}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-forest/60 border border-heritage-gold/30 text-heritage-ivory text-xs focus:border-heritage-gold focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-ivory border border-heritage-gold/50 text-heritage-timber text-xs focus:border-heritage-terracotta focus:outline-none shadow-sm font-medium"
             >
               {districts.map(d => (
                 <option key={d.slug} value={d.slug}>
@@ -218,14 +217,14 @@ export default function ContributePage({ districts = [], categories = [] }) {
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-xs font-bold text-heritage-gold uppercase tracking-wider">
+            <label className="text-xs font-serif font-bold text-heritage-maroon uppercase tracking-wider">
               {t.selectCategory} *
             </label>
             <select
               name="category"
               value={formData.category}
               onChange={handleChange}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-forest/60 border border-heritage-gold/30 text-heritage-ivory text-xs focus:border-heritage-gold focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-ivory border border-heritage-gold/50 text-heritage-timber text-xs focus:border-heritage-terracotta focus:outline-none shadow-sm font-medium"
             >
               {categories.map(c => (
                 <option key={c.slug} value={c.slug}>
@@ -236,7 +235,7 @@ export default function ContributePage({ districts = [], categories = [] }) {
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-xs font-bold text-heritage-gold uppercase tracking-wider">
+            <label className="text-xs font-serif font-bold text-heritage-maroon uppercase tracking-wider">
               {t.exactLocality}
             </label>
             <input
@@ -245,14 +244,14 @@ export default function ContributePage({ districts = [], categories = [] }) {
               value={formData.locality}
               onChange={handleChange}
               placeholder="e.g. Nedumangad Temple Grounds"
-              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-forest/60 border border-heritage-gold/30 text-heritage-ivory text-xs focus:border-heritage-gold focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-ivory border border-heritage-gold/50 text-heritage-timber text-xs focus:border-heritage-terracotta focus:outline-none shadow-sm"
             />
           </div>
         </div>
 
         {/* Descriptions */}
         <div className="space-y-1.5">
-          <label className="text-xs font-bold text-heritage-gold uppercase tracking-wider">
+          <label className="text-xs font-serif font-bold text-heritage-maroon uppercase tracking-wider">
             {t.descriptionEn} *
           </label>
           <textarea
@@ -262,12 +261,12 @@ export default function ContributePage({ districts = [], categories = [] }) {
             value={formData.description}
             onChange={handleChange}
             placeholder="Detailed description of the art, instruments, choreography, or craft technique..."
-            className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-forest/60 border border-heritage-gold/30 text-heritage-ivory text-xs focus:border-heritage-gold focus:outline-none leading-relaxed"
+            className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-ivory border border-heritage-gold/50 text-heritage-timber text-xs focus:border-heritage-terracotta focus:outline-none leading-relaxed shadow-sm"
           />
         </div>
 
         <div className="space-y-1.5">
-          <label className="text-xs font-bold text-heritage-gold uppercase tracking-wider">
+          <label className="text-xs font-serif font-bold text-heritage-maroon uppercase tracking-wider">
             {t.storyField}
           </label>
           <textarea
@@ -276,14 +275,14 @@ export default function ContributePage({ districts = [], categories = [] }) {
             value={formData.cultural_story}
             onChange={handleChange}
             placeholder="Oral folklore, village origins, rituals, or mythological backstory..."
-            className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-forest/60 border border-heritage-gold/30 text-heritage-ivory text-xs focus:border-heritage-gold focus:outline-none leading-relaxed"
+            className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-ivory border border-heritage-gold/50 text-heritage-timber text-xs focus:border-heritage-terracotta focus:outline-none leading-relaxed shadow-sm"
           />
         </div>
 
         {/* Image & Source Citations */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1.5">
-            <label className="text-xs font-bold text-heritage-gold uppercase tracking-wider">
+            <label className="text-xs font-serif font-bold text-heritage-maroon uppercase tracking-wider">
               {t.imageUrl} *
             </label>
             <input
@@ -293,12 +292,12 @@ export default function ContributePage({ districts = [], categories = [] }) {
               value={formData.image}
               onChange={handleChange}
               placeholder="https://... (High resolution authentic URL)"
-              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-forest/60 border border-heritage-gold/30 text-heritage-ivory text-xs focus:border-heritage-gold focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-ivory border border-heritage-gold/50 text-heritage-timber text-xs focus:border-heritage-terracotta focus:outline-none shadow-sm"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-xs font-bold text-heritage-gold uppercase tracking-wider">
+            <label className="text-xs font-serif font-bold text-heritage-maroon uppercase tracking-wider">
               {t.imageCredit} *
             </label>
             <input
@@ -308,13 +307,13 @@ export default function ContributePage({ districts = [], categories = [] }) {
               value={formData.image_credit}
               onChange={handleChange}
               placeholder="e.g. Wikimedia Commons / Contributor Photo"
-              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-forest/60 border border-heritage-gold/30 text-heritage-ivory text-xs focus:border-heritage-gold focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-ivory border border-heritage-gold/50 text-heritage-timber text-xs focus:border-heritage-terracotta focus:outline-none shadow-sm"
             />
           </div>
         </div>
 
         <div className="space-y-1.5">
-          <label className="text-xs font-bold text-heritage-gold uppercase tracking-wider">
+          <label className="text-xs font-serif font-bold text-heritage-maroon uppercase tracking-wider">
             {t.sourceRef} *
           </label>
           <input
@@ -324,21 +323,21 @@ export default function ContributePage({ districts = [], categories = [] }) {
             value={formData.source_reference}
             onChange={handleChange}
             placeholder="e.g. Kerala Folklore Akademi Journal Vol. 14 / Hereditary family lineage"
-            className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-forest/60 border border-heritage-gold/30 text-heritage-ivory text-xs focus:border-heritage-gold focus:outline-none"
+            className="w-full px-3.5 py-2.5 rounded-xl bg-heritage-ivory border border-heritage-gold/50 text-heritage-timber text-xs focus:border-heritage-terracotta focus:outline-none shadow-sm"
           />
         </div>
 
         {/* Consent Checkbox */}
         <div className="pt-2">
-          <label className="flex items-start space-x-3 cursor-pointer text-xs text-heritage-ivory/80">
+          <label className="flex items-start space-x-3 cursor-pointer text-xs text-heritage-timber">
             <input
               type="checkbox"
               name="consent"
               checked={formData.consent}
               onChange={handleChange}
-              className="mt-0.5 w-4 h-4 text-heritage-gold rounded bg-heritage-forest border-heritage-gold/40 focus:ring-0"
+              className="mt-0.5 w-4 h-4 text-heritage-terracotta rounded bg-heritage-ivory border-heritage-gold/60 focus:ring-0"
             />
-            <span>{t.consentCheckbox}</span>
+            <span className="leading-relaxed">{t.consentCheckbox}</span>
           </label>
         </div>
 
@@ -347,7 +346,7 @@ export default function ContributePage({ districts = [], categories = [] }) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-4 rounded-xl bg-gradient-to-r from-heritage-gold to-heritage-goldDark text-heritage-dark font-extrabold text-xs uppercase tracking-wider shadow-gold-subtle hover:brightness-110 flex items-center justify-center space-x-2 transition-all disabled:opacity-50"
+            className="w-full py-4 rounded-2xl bg-[#C6A15B] hover:bg-[#AB8742] text-[#123B32] font-serif font-bold text-xs uppercase tracking-wider shadow-kasavu flex items-center justify-center space-x-2 transition-all disabled:opacity-50"
           >
             {loading ? (
               <Loader2 className="w-4 h-4 animate-spin" />

@@ -116,7 +116,7 @@ export const translations = {
     
     // Footer
     footerTagline: "OORVEX is dedicated to the documentation, preservation, and celebration of the living traditions of Kerala.",
-    hackathonNotice: "Built for Hackathon | PS-05 Discovery & Mapping: The Living Culture Map | PS-04 Language & Accessibility",
+    platformMission: "Preserving, documenting, and celebrating the living heritage of Kerala across all 14 districts.",
     rights: "Cultural Heritage Commons. Sourced with respect and historical integrity."
   },
   ml: {
@@ -235,7 +235,7 @@ export const translations = {
     
     // Footer
     footerTagline: "കേരളത്തിന്റെ ജീവസ്സുറ്റ സാംസ്കാരിക പാരമ്പര്യങ്ങളെ രേഖപ്പെടുത്തുന്നതിനും സംരക്ഷിക്കുന്നതിനും സമർപ്പിതം.",
-    hackathonNotice: "ഹാക്കത്തോൺ പ്രോജക്റ്റ് | PS-05 ലൈവിംഗ് കൾച്ചർ മാപ്പ് | PS-04 ഭാഷയും പ്രവേശനക്ഷമതയും",
+    platformMission: "കേരളത്തിലെ 14 ജില്ലകളിലെയും സാംസ്കാരിക പൈതൃകവും ജീവസ്സുറ്റ പാരമ്പര്യങ്ങളും വരുംതലമുറകൾക്കായി അടയാളപ്പെടുത്തുന്നു.",
     rights: "സാംസ്കാരിക പൈതൃക സംരക്ഷണ കൂട്ടായ്മ. ചരിത്രപരമായ കൃത്യതയോടെ സമാഹരിച്ചത്."
   }
 };

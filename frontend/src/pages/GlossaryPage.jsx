@@ -14,7 +14,6 @@ export default function GlossaryPage({ onNavigate }) {
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(true);
 
-  // Fallback glossary list
   const fallbackTerms = [
     { id: 1, term_ml: 'തെയ്യം', transliteration: 'Theyyam', meaning_en: 'Living god or embodiment of divinity in North Malabar ritual dance-worship.', cultural_context: 'Derived from Sanskrit "Daivam" (deity). The ritual manifestation where human transfigures into cosmic force in sacred kavus.', audio_phonetic: 'They-yam', district_name: 'Kannur' },
     { id: 2, term_ml: 'പടയണി', transliteration: 'Padayani', meaning_en: 'Military array / row of divine effigy masks danced to pacify ferocious Kali.', cultural_context: 'Performed across Central Travancore Bhadrakali temples using natural leaf masks (Kolams) and Thappu percussion.', audio_phonetic: 'Pa-da-ya-ni', district_name: 'Pathanamthitta' },
@@ -50,32 +49,32 @@ export default function GlossaryPage({ onNavigate }) {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10 bg-[#F7F0DF]">
       
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-heritage-gold/20">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-[#C6A15B]/30">
         <div>
-          <span className="text-xs uppercase font-mono tracking-widest text-heritage-gold font-bold flex items-center space-x-1.5">
-            <BookOpen className="w-4 h-4 text-heritage-gold" />
+          <span className="text-xs uppercase font-serif tracking-widest text-[#A64F32] font-bold flex items-center space-x-1.5">
+            <BookOpen className="w-4 h-4 text-[#A64F32]" />
             <span>Malayalam Linguistic & Cultural Lexicon</span>
           </span>
-          <h1 className="font-serif font-black text-4xl sm:text-5xl text-gold-gradient mt-1">
+          <h1 className="font-serif font-black text-4xl sm:text-5xl text-[#405B43] mt-1">
             {t.glossaryTitle}
           </h1>
-          <p className="text-sm text-heritage-ivory/70 max-w-2xl mt-2">
+          <p className="text-sm text-[#392A20]/80 max-w-2xl mt-2 leading-relaxed font-sans">
             {t.glossarySubtitle}
           </p>
         </div>
 
         {/* Search */}
         <div className="relative min-w-[280px]">
-          <Search className="w-4 h-4 text-heritage-gold absolute left-3 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-[#A64F32] absolute left-3 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder={t.searchGlossary}
-            className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-heritage-forest/60 border border-heritage-gold/30 text-heritage-ivory text-xs placeholder-heritage-ivory/40 focus:border-heritage-gold focus:outline-none"
+            className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-[#FFFDF6] border border-[#C6A15B]/50 text-[#392A20] text-xs placeholder-[#392A20]/50 focus:border-[#405B43] focus:outline-none shadow-sm"
           />
         </div>
       </div>
@@ -85,20 +84,20 @@ export default function GlossaryPage({ onNavigate }) {
         {filtered.map((item) => (
           <div
             key={item.id}
-            className="rounded-2xl p-6 glass-panel border border-heritage-gold/25 hover:border-heritage-gold shadow-md hover:shadow-gold-subtle transition-all duration-300 space-y-4 flex flex-col justify-between"
+            className="rounded-3xl p-6 bg-[#FFFDF6] border-2 border-[#C6A15B]/35 hover:border-[#405B43] shadow-nalukettu hover:shadow-nalukettu-lg transition-all duration-300 space-y-4 flex flex-col justify-between"
           >
             <div className="space-y-3">
               <div className="flex items-start justify-between">
                 <div>
-                  <h3 className="font-malayalam-text font-bold text-3xl text-heritage-gold">
+                  <h3 className="font-malayalam-text font-bold text-3xl text-[#405B43]">
                     {item.term_ml}
                   </h3>
                   <div className="flex items-center space-x-2 mt-0.5">
-                    <span className="text-sm font-semibold font-serif text-heritage-ivoryLight">
+                    <span className="text-sm font-serif font-bold text-[#392A20]">
                       {item.transliteration}
                     </span>
                     {item.audio_phonetic && (
-                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-heritage-forest border border-heritage-gold/30 text-heritage-gold/80">
+                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-[#E8D8B8] border border-[#C6A15B]/40 text-[#405B43] font-semibold">
                         /{item.audio_phonetic}/
                       </span>
                     )}
@@ -114,30 +113,30 @@ export default function GlossaryPage({ onNavigate }) {
                       speakText(`${item.transliteration}. In Malayalam: ${item.term_ml}. Meaning: ${item.meaning_en}`, 'ml');
                     }
                   }}
-                  className="p-2.5 rounded-xl bg-heritage-forest border border-heritage-gold/30 hover:border-heritage-gold text-heritage-gold shadow-sm transition-all"
+                  className="p-2.5 rounded-xl bg-[#E8D8B8]/70 border border-[#C6A15B]/50 hover:bg-[#E8D8B8] text-[#405B43] shadow-sm transition-all"
                   title="Pronounce term"
                   aria-label={`Pronounce ${item.transliteration}`}
                 >
-                  <Volume2 className="w-4 h-4" />
+                  <Volume2 className="w-4 h-4 text-[#A64F32]" />
                 </button>
               </div>
 
-              <div className="p-3 rounded-xl bg-heritage-forest/40 border border-heritage-gold/20 text-xs text-heritage-ivory/90 font-medium">
-                <strong className="text-heritage-gold">Meaning:</strong> {item.meaning_en}
+              <div className="p-3.5 rounded-2xl bg-[#F7F0DF] border border-[#C6A15B]/30 text-xs text-[#392A20] font-medium leading-relaxed font-sans">
+                <strong className="text-[#405B43] font-serif font-bold">Meaning:</strong> {item.meaning_en}
               </div>
 
-              <p className="text-xs text-heritage-ivory/70 leading-relaxed">
+              <p className="text-xs text-[#392A20]/80 leading-relaxed font-sans">
                 {item.cultural_context}
               </p>
             </div>
 
             {item.district_name && (
-              <div className="pt-3 border-t border-heritage-gold/15 flex items-center justify-between text-[11px] text-heritage-ivory/60">
+              <div className="pt-3 border-t border-[#C6A15B]/20 flex items-center justify-between text-[11px] text-[#392A20]/70 font-mono">
                 <span className="flex items-center space-x-1">
-                  <MapPin className="w-3 h-3 text-heritage-gold" />
+                  <MapPin className="w-3.5 h-3.5 text-[#A64F32]" />
                   <span>Associated District: {item.district_name}</span>
                 </span>
-                <span className="text-heritage-gold font-mono">Heritage Lexicon</span>
+                <span className="text-[#A64F32] font-serif font-semibold">Heritage Lexicon</span>
               </div>
             )}
           </div>
@@ -145,7 +144,7 @@ export default function GlossaryPage({ onNavigate }) {
       </div>
 
       {filtered.length === 0 && (
-        <div className="py-20 text-center text-sm text-heritage-ivory/60">
+        <div className="py-20 text-center text-sm text-[#392A20]/60 bg-[#FFFDF6] rounded-3xl border border-dashed border-[#C6A15B]/40">
           No cultural terms match your search.
         </div>
       )}

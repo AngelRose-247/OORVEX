@@ -5,6 +5,7 @@ import { PassportProvider } from './context/PassportContext';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import KeralaMap from './components/KeralaMap';
 import CultureMatchModal from './components/CultureMatchModal';
 import AccessibilityBar from './components/AccessibilityBar';
 import PassportDrawer from './components/PassportDrawer';
@@ -96,23 +97,22 @@ export default function App() {
       return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
           <div>
-            <span className="text-xs uppercase font-mono tracking-widest text-heritage-gold font-bold">
-              PS-05 Discovery & Mapping
+            <span className="text-xs uppercase font-serif tracking-widest text-heritage-terracotta font-bold">
+              Geographic Cultural Discovery
             </span>
-            <h1 className="font-serif font-black text-4xl sm:text-5xl text-gold-gradient mt-1">
+            <h1 className="font-serif font-black text-4xl sm:text-5xl text-heritage-maroon mt-1">
               Interactive Kerala Culture Map
             </h1>
-            <p className="text-sm text-heritage-ivory/70 max-w-2xl mt-2">
-              Explore all 14 district boundaries, cultural hotspots, and authentic regional heritages.
+            <p className="text-sm text-heritage-timber/80 max-w-2xl mt-2 leading-relaxed">
+              Explore all 14 district boundaries, cultural clusters, and authentic regional heritage records.
             </p>
           </div>
-          <div className="h-[750px] w-full">
-            <Home
+          <div className="w-full">
+            <KeralaMap
               districts={districts}
               listings={listings}
               categories={categories}
               onNavigate={navigate}
-              onOpenAI={() => setIsAIModalOpen(true)}
             />
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function App() {
     }
 
     if (currentPath === '/admin') {
-      return <AdminDashboard onNavigate={navigate} />;
+      return <AdminDashboard onNavigate={navigate} listings={listings} />;
     }
 
     if (currentPath === '/about') {
@@ -202,7 +202,7 @@ export default function App() {
     <LanguageProvider>
       <AccessibilityProvider>
         <PassportProvider>
-          <div className="flex flex-col min-h-screen bg-heritage-dark text-heritage-ivory selection:bg-heritage-gold selection:text-heritage-dark font-sans">
+          <div className="flex flex-col min-h-screen bg-heritage-ivory text-heritage-timber selection:bg-heritage-terracotta selection:text-heritage-ivory font-sans">
             
             {/* Top Navigation */}
             <Navbar
