@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-scale: 1rem;
+  }
+
+  body {
+    background-color: #071B17;
+    color: #F4EBD9;
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Malayalam', sans-serif;
+  }
+
+  h1, h2, h3, .font-serif-heading {
+    font-family: 'Cinzel', 'Playfair Display', 'Noto Serif Malayalam', Georgia, serif;
+  }
+
+  .font-malayalam-text {
+    font-family: 'Manjari', 'Noto Sans Malayalam', sans-serif;
+  }
+}
+
+/* Accessibility Modes */
+body.accessibility-contrast-high {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+body.accessibility-contrast-high .bg-heritage-dark,
+body.accessibility-contrast-high .bg-heritage-forest,
+body.accessibility-contrast-high .bg-heritage-moss {
+  background-color: #000000 !important;
+  border-color: #D6B46A !important;
+}
+
+body.accessibility-contrast-high .text-heritage-ivory,
+body.accessibility-contrast-high .text-heritage-ivoryLight {
+  color: #FFFFFF !important;
+}
+
+body.accessibility-contrast-high a,
+body.accessibility-contrast-high button {
+  outline: 2px solid #D6B46A !important;
+}
+
+/* Reduced Motion Mode */
+@media (prefers-reduced-motion: reduce), (update: slow) {
+  *, ::before, ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body.accessibility-reduced-motion *,
+body.accessibility-reduced-motion ::before,
+body.accessibility-reduced-motion ::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #071B17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #193F36;
+  border-radius: 4px;
+  border: 1px solid rgba(214, 180, 106, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D6B46A;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(16, 43, 36, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(214, 180, 106, 0.2);
+}
+
+.glass-panel-dark {
+  background: rgba(7, 27, 23, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(214, 180, 106, 0.15);
+}
+
+.glass-gold-border {
+  border: 1px solid rgba(214, 180, 106, 0.35);
+}
+
+/* Leaflet Dark Kerala Map Theme */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #071B17 !important;
+  font-family: inherit;
+  z-index: 10;
+}
+
+.leaflet-tile {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.35) brightness(0.7);
+}
+
+.leaflet-popup-content-wrapper {
+  background: #102B24 !important;
+  color: #F4EBD9 !important;
+  border: 1px solid #D6B46A !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.8) !important;
+}
+
+.leaflet-popup-tip {
+  background: #102B24 !important;
+  border-left: 1px solid #D6B46A !important;
+  border-top: 1px solid #D6B46A !important;
+}
+
+.leaflet-popup-close-button {
+  color: #D6B46A !important;
+}
+
+/* Gold Text Gradients */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F3DC9B 0%, #D6B46A 50%, #9A772B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #F3DC9B 0%, #D6B46A 50%, #A68434 100%);
+}

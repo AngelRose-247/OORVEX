@@ -1,0 +1,243 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "kasaragod",
+        "name": "Kasaragod",
+        "name_ml": "കാസർഗോഡ്",
+        "headquarters": "Kasaragod",
+        "center": [12.5102, 74.9852]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [74.85, 12.78], [75.15, 12.75], [75.35, 12.50], [75.30, 12.20],
+          [75.12, 12.18], [74.98, 12.45], [74.85, 12.78]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "kannur",
+        "name": "Kannur",
+        "name_ml": "കണ്ണൂർ",
+        "headquarters": "Kannur",
+        "center": [11.8745, 75.3704]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [75.12, 12.18], [75.30, 12.20], [75.60, 12.15], [75.80, 11.95],
+          [75.65, 11.75], [75.40, 11.85], [75.12, 12.18]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "wayanad",
+        "name": "Wayanad",
+        "name_ml": "വയനാട്",
+        "headquarters": "Kalpetta",
+        "center": [11.6050, 76.0828]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [75.80, 11.95], [76.25, 11.98], [76.40, 11.70], [76.20, 11.45],
+          [75.95, 11.55], [75.80, 11.95]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "kozhikode",
+        "name": "Kozhikode",
+        "name_ml": "കോഴിക്കോട്",
+        "headquarters": "Kozhikode",
+        "center": [11.2588, 75.7804]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [75.40, 11.85], [75.65, 11.75], [75.95, 11.55], [76.05, 11.35],
+          [75.85, 11.15], [75.65, 11.45], [75.40, 11.85]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "malappuram",
+        "name": "Malappuram",
+        "name_ml": "മലപ്പുറം",
+        "headquarters": "Malappuram",
+        "center": [11.0510, 76.0711]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [75.85, 11.15], [76.05, 11.35], [76.35, 11.25], [76.50, 11.00],
+          [76.20, 10.75], [75.85, 10.80], [75.85, 11.15]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "palakkad",
+        "name": "Palakkad",
+        "name_ml": "പാലക്കാട്",
+        "headquarters": "Palakkad",
+        "center": [10.7867, 76.6548]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [76.20, 10.75], [76.50, 11.00], [76.85, 11.10], [76.95, 10.60],
+          [76.60, 10.50], [76.30, 10.65], [76.20, 10.75]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "thrissur",
+        "name": "Thrissur",
+        "name_ml": "തൃശ്ശൂർ",
+        "headquarters": "Thrissur",
+        "center": [10.5276, 76.2144]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [75.85, 10.80], [76.30, 10.65], [76.60, 10.50], [76.55, 10.20],
+          [76.15, 10.15], [76.00, 10.45], [75.85, 10.80]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "ernakulam",
+        "name": "Ernakulam",
+        "name_ml": "എറണാകുളം",
+        "headquarters": "Kochi",
+        "center": [9.9816, 76.2999]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [76.15, 10.15], [76.55, 10.20], [76.80, 10.05], [76.70, 9.85],
+          [76.30, 9.80], [76.15, 10.00], [76.15, 10.15]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "idukki",
+        "name": "Idukki",
+        "name_ml": "ഇടുക്കി",
+        "headquarters": "Painavu",
+        "center": [9.8518, 76.9405]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [76.80, 10.05], [77.25, 10.35], [77.40, 9.75], [77.10, 9.45],
+          [76.80, 9.65], [76.70, 9.85], [76.80, 10.05]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "kottayam",
+        "name": "Kottayam",
+        "name_ml": "കോട്ടയം",
+        "headquarters": "Kottayam",
+        "center": [9.5916, 76.5222]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [76.30, 9.80], [76.70, 9.85], [76.80, 9.65], [76.75, 9.40],
+          [76.45, 9.45], [76.35, 9.65], [76.30, 9.80]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "alappuzha",
+        "name": "Alappuzha",
+        "name_ml": "ആലപ്പുഴ",
+        "headquarters": "Alappuzha",
+        "center": [9.4981, 76.3388]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [76.25, 9.75], [76.35, 9.65], [76.45, 9.45], [76.55, 9.15],
+          [76.45, 9.05], [76.25, 9.35], [76.25, 9.75]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "pathanamthitta",
+        "name": "Pathanamthitta",
+        "name_ml": "പത്തനംതിട്ട",
+        "headquarters": "Pathanamthitta",
+        "center": [9.2648, 76.7870]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [76.55, 9.40], [76.80, 9.45], [77.10, 9.45], [77.20, 9.15],
+          [76.80, 9.05], [76.55, 9.20], [76.55, 9.40]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "kollam",
+        "name": "Kollam",
+        "name_ml": "കൊല്ലം",
+        "headquarters": "Kollam",
+        "center": [8.8932, 76.6141]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [76.45, 9.05], [76.80, 9.05], [77.20, 9.15], [77.15, 8.85],
+          [76.75, 8.75], [76.50, 8.85], [76.45, 9.05]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "thiruvananthapuram",
+        "name": "Thiruvananthapuram",
+        "name_ml": "തിരുവനന്തപുരം",
+        "headquarters": "Thiruvananthapuram",
+        "center": [8.5241, 76.9366]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [76.75, 8.75], [77.15, 8.85], [77.30, 8.55], [77.20, 8.25],
+          [76.95, 8.25], [76.80, 8.45], [76.75, 8.75]
+        ]]
+      }
+    }
+  ]
+}
