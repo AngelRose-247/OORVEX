@@ -40,6 +40,8 @@ export default {
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'Cinzel', '"Noto Serif Malayalam"', 'Georgia', 'serif'],
         sans: ['Manrope', '"Plus Jakarta Sans"', 'Inter', '"Noto Sans Malayalam"', 'sans-serif'],
+        // font-mono is remapped to DM Sans — replaces all monospaced typography site-wide
+        mono: ['"DM Sans"', 'Manrope', '"Plus Jakarta Sans"', 'sans-serif'],
         malayalam: ['"Noto Serif Malayalam"', '"Noto Sans Malayalam"', 'Manjari', 'sans-serif'],
       },
       boxShadow: {

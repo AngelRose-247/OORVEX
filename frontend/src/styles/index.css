@@ -17,6 +17,11 @@
   .font-malayalam-text {
     font-family: 'Noto Serif Malayalam', 'Noto Sans Malayalam', sans-serif;
   }
+
+  /* Remap all monospaced typography to DM Sans throughout the site */
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'DM Sans', 'Manrope', 'Plus Jakarta Sans', sans-serif;
+  }
 }
 
 /* Ancient Kerala Decorative Utilities */
