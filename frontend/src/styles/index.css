@@ -9,7 +9,10 @@
     font-family: 'Manrope', 'Plus Jakarta Sans', 'Noto Sans Malayalam', sans-serif;
   }
 
-  h1, h2, h3, .font-serif-heading {
+  h1,
+  h2,
+  h3,
+  .font-serif-heading {
     font-family: 'Cormorant Garamond', 'Cinzel', 'Noto Serif Malayalam', Georgia, serif;
     color: #31543E;
   }
@@ -19,7 +22,11 @@
   }
 
   /* Remap all monospaced typography to DM Sans throughout the site */
-  code, kbd, samp, pre, .font-mono {
+  code,
+  kbd,
+  samp,
+  pre,
+  .font-mono {
     font-family: 'DM Sans', 'Manrope', 'Plus Jakarta Sans', sans-serif;
   }
 }
@@ -72,8 +79,12 @@ body.accessibility-contrast-high button {
 }
 
 /* Reduced Motion Mode */
-@media (prefers-reduced-motion: reduce), (update: slow) {
-  *, ::before, ::after {
+@media (prefers-reduced-motion: reduce),
+(update: slow) {
+
+  *,
+  ::before,
+  ::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
