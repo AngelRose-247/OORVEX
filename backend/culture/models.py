@@ -14,6 +14,13 @@ class District(models.Model):
     longitude = models.FloatField()
     hero_image = models.URLField(max_length=512)
     image_credit = models.CharField(max_length=256, default="Wikimedia Commons / CC BY-SA")
+    image_file = models.ImageField(upload_to='districts/', null=True, blank=True, help_text="Custom uploaded district cover image")
+    image_caption = models.CharField(max_length=256, blank=True, help_text="Caption describing the district cover image")
+    image_photographer = models.CharField(max_length=256, blank=True, help_text="Photographer or creator of the image")
+    image_source_url = models.URLField(max_length=512, blank=True, help_text="Original source repository or archive citation")
+    image_licence = models.CharField(max_length=128, default="Wikimedia Commons / CC BY-SA 4.0", blank=True)
+    image_alt_text = models.CharField(max_length=256, blank=True, help_text="Descriptive alternative text for accessibility")
+    image_approval_status = models.CharField(max_length=64, default="Verified", blank=True, help_text="Curator verification status")
     area_sq_km = models.IntegerField(default=0)
     order = models.PositiveSmallIntegerField(default=0)
 
@@ -22,6 +29,12 @@ class District(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.name_ml})"
+
+    @property
+    def cover_image(self):
+        if self.image_file:
+            return self.image_file.url
+        return self.hero_image
 
 
 class Category(models.Model):
