@@ -4,6 +4,7 @@ import { usePassport } from '../context/PassportContext';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { fetchListingDetail } from '../services/api';
 import CulturalCard from '../components/CulturalCard';
+import SafeImage from '../components/SafeImage';
 import {
   MapPin, Landmark, Award, Volume2, VolumeX, ArrowLeft,
   ShieldCheck, Share2, BookOpen, Compass, ExternalLink, Sparkles,
@@ -147,7 +148,7 @@ export default function CulturalDetail({
       
       {/* 1. HERO HEADER: Art Form Introduction & Visual Masthead */}
       <div className="relative min-h-[520px] w-full overflow-hidden bg-[#123B32] flex items-end">
-        <img
+        <SafeImage
           src={listing.image}
           alt={listing.title}
           className="absolute inset-0 w-full h-full object-cover"
@@ -549,7 +550,7 @@ export default function CulturalDetail({
                 className="rounded-2xl overflow-hidden bg-[#FFFDF6] border border-[#C6A15B]/40 shadow-sm space-y-3 p-3 flex flex-col justify-between"
               >
                 <div className="relative h-60 w-full overflow-hidden rounded-xl bg-[#E8D8B8]">
-                  <img
+                  <SafeImage
                     src={img.image_url}
                     alt={img.alt_text || img.caption}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"

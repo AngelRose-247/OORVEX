@@ -4,6 +4,7 @@ import { usePassport } from '../context/PassportContext';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { fetchDistrictDetail } from '../services/api';
 import CulturalCard from '../components/CulturalCard';
+import SafeImage from '../components/SafeImage';
 import {
   MapPin, Landmark, Award, Volume2, VolumeX, ArrowLeft,
   Sparkles, CheckCircle2, Share2, Compass, Calendar, Clock,
@@ -114,7 +115,7 @@ export default function DistrictDetail({
       
       {/* 1. Authentic District Hero Banner */}
       <div className="relative h-[480px] w-full overflow-hidden bg-[#123B32]">
-        <img
+        <SafeImage
           src={district.hero_image}
           alt={district.name}
           className="w-full h-full object-cover"

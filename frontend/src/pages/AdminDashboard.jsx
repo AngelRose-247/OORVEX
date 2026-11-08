@@ -13,6 +13,7 @@ import {
   RefreshCw, MessageSquare, Camera, Upload, Image as ImageIcon,
   Sparkles, Save, Filter, ChevronRight, CheckCircle2, HelpCircle
 } from 'lucide-react';
+import SafeImage from '../components/SafeImage';
 
 export default function AdminDashboard({ onNavigate, listings: propListings = [] }) {
   const { language, t } = useLanguage();
@@ -392,13 +393,10 @@ export default function AdminDashboard({ onNavigate, listings: propListings = []
                     </label>
                     <div className="h-56 w-full rounded-2xl overflow-hidden bg-[#E8D8B8] border border-[#C6A15B]/40 relative">
                       {imageForm.image_url ? (
-                        <img
+                        <SafeImage
                           src={imageForm.image_url}
                           alt={imageForm.alt_text || 'Preview'}
                           className="w-full h-full object-cover"
-                          onError={(e) => {
-                            e.target.src = 'https://images.unsplash.com/photo-1600100397608-f010f443b749?auto=format&fit=crop&w=800&q=80';
-                          }}
                         />
                       ) : (
                         <div className="h-full flex items-center justify-center text-xs text-[#392A20]/50 font-serif">
@@ -541,7 +539,7 @@ export default function AdminDashboard({ onNavigate, listings: propListings = []
             >
               {/* Image Preview */}
               <div className="w-full lg:w-48 h-44 rounded-2xl overflow-hidden bg-[#E8D8B8] flex-shrink-0 border border-[#C6A15B]/35 relative shadow-sm">
-                <img
+                <SafeImage
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover"

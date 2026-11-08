@@ -6,6 +6,7 @@ import {
   Sparkles, X, Search, BookOpen, Volume2, VolumeX, ShieldCheck,
   ExternalLink, ChevronRight, CornerDownLeft, Loader2
 } from 'lucide-react';
+import SafeImage from './SafeImage';
 
 export default function CultureMatchModal({ isOpen, onClose, onNavigate }) {
   const { language, t } = useLanguage();
@@ -206,7 +207,7 @@ export default function CultureMatchModal({ isOpen, onClose, onNavigate }) {
                         className="p-3 rounded-2xl bg-[#F7F0DF] border border-[#C6A15B]/35 hover:border-[#405B43] cursor-pointer transition-all flex items-start space-x-3 group shadow-sm"
                       >
                         {rec.image && (
-                          <img
+                          <SafeImage
                             src={rec.image}
                             alt={rec.title}
                             className="w-14 h-14 rounded-xl object-cover border border-[#C6A15B]/30 flex-shrink-0"

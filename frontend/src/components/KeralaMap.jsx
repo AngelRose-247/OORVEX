@@ -8,6 +8,7 @@ import {
   Search, Filter, MapPin, Eye, Compass, Layers, ExternalLink,
   Sparkles, CheckCircle2, ChevronRight, X
 } from 'lucide-react';
+import SafeImage from './SafeImage';
 
 // Custom antique brass lamp marker icon for cultural locations
 const createCulturalIcon = (isFeatured = false) => {
@@ -230,7 +231,7 @@ export default function KeralaMap({ districts = [], listings = [], categories = 
                 <Popup>
                   <div className="p-1 space-y-2 max-w-[260px]">
                     {listing.image && (
-                      <img
+                      <SafeImage
                         src={listing.image}
                         alt={listing.title}
                         className="w-full h-28 object-cover rounded-lg border border-[#C6A15B]/30"
@@ -316,7 +317,7 @@ export default function KeralaMap({ districts = [], listings = [], categories = 
 
               {selectedDistrict.hero_image && (
                 <div className="relative rounded-2xl overflow-hidden border border-[#C6A15B]/30 shadow-sm">
-                  <img
+                  <SafeImage
                     src={selectedDistrict.hero_image}
                     alt={selectedDistrict.name}
                     className="w-full h-40 object-cover"
@@ -349,7 +350,7 @@ export default function KeralaMap({ districts = [], listings = [], categories = 
                       className="p-2.5 rounded-xl bg-[#F7F0DF] border border-[#C6A15B]/30 hover:border-[#405B43] cursor-pointer transition-all flex items-center space-x-3 group shadow-sm"
                     >
                       {item.image && (
-                        <img
+                        <SafeImage
                           src={item.image}
                           alt={item.title}
                           className="w-12 h-12 rounded-lg object-cover border border-[#C6A15B]/30 flex-shrink-0"

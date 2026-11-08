@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { usePassport } from '../context/PassportContext';
 import { Landmark, Search, MapPin, ChevronRight, CheckCircle2, ArrowRight } from 'lucide-react';
+import SafeImage from '../components/SafeImage';
 
 export default function ExploreDistricts({ districts = [], onNavigate }) {
   const { language, t } = useLanguage();
@@ -63,7 +64,7 @@ export default function ExploreDistricts({ districts = [], onNavigate }) {
               <div>
                 {/* Hero Image */}
                 <div className="relative h-52 w-full overflow-hidden bg-[#E8D8B8]">
-                  <img
+                  <SafeImage
                     src={d.hero_image}
                     alt={d.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

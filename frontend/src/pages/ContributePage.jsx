@@ -60,7 +60,7 @@ export default function ContributePage({ districts = [], categories = [] }) {
         description: formData.description,
         description_ml: formData.description_ml,
         cultural_story: formData.cultural_story,
-        image: formData.image || 'https://images.unsplash.com/photo-1600100397608-f010f443b749?auto=format&fit=crop&w=800&q=80',
+        image: formData.image || '/images/placeholders/theyyam-showcase.jpg',
         image_credit: formData.image_credit,
         source_reference: formData.source_reference,
         consent: formData.consent,

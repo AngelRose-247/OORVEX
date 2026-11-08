@@ -105,7 +105,7 @@ def run_tests():
 
     # 13. Admin Image Upload & Replacement
     img_payload = {
-        'image_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Theyyam_Kannur.jpg/800px-Theyyam_Kannur.jpg',
+        'image_url': '/images/arts/theyyam.jpg',
         'caption': 'Curator uploaded authentic Theyyam photo',
         'alt_text': 'Close-up of vibrant red mineral face painting in Theyyam',
         'photographer': 'Verified Kerala Cultural Archives (CC BY-SA 4.0)',

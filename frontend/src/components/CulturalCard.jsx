@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { MapPin, Sparkles, ExternalLink, ShieldCheck, ArrowRight } from 'lucide-react';
+import SafeImage from './SafeImage';
 
 export default function CulturalCard({ listing, onNavigate, onClick, onDistrictClick }) {
   const { language, t } = useLanguage();
@@ -25,8 +26,8 @@ export default function CulturalCard({ listing, onNavigate, onClick, onDistrictC
       <div>
         {/* Authentic Art Form Image */}
         <div className="relative h-56 w-full overflow-hidden bg-[#E8D8B8]">
-          <img
-            src={listing.image || 'https://images.unsplash.com/photo-1600100397608-f010f443b749?auto=format&fit=crop&w=800&q=80'}
+          <SafeImage
+            src={listing.image || '/images/arts/theyyam.jpg'}
             alt={listing.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"

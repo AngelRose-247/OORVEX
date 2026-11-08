@@ -6,6 +6,7 @@ import HeroMandala3D from '../components/HeroMandala3D';
 import CinematicDoorIntro from '../components/CinematicDoorIntro';
 import KeralaMap from '../components/KeralaMap';
 import CulturalCard from '../components/CulturalCard';
+import SafeImage from '../components/SafeImage';
 import {
   Compass, Sparkles, MapPin, Landmark, BookOpen, Feather,
   ArrowRight, ShieldCheck, ChevronRight, Award, HeartHandshake, Eye,
@@ -268,8 +269,8 @@ export default function Home({
 
           {/* Authentic Kerala Heritage Visual Showcase */}
           <div className="relative rounded-3xl overflow-hidden border-2 border-[#C9A45C]/40 shadow-nalukettu-lg">
-            <img
-              src="https://images.unsplash.com/photo-1600100397608-f010f443b749?auto=format&fit=crop&w=1200&q=80"
+            <SafeImage
+              src="/images/placeholders/theyyam-showcase.jpg"
               alt="Authentic Kerala Theyyam Tradition"
               className="w-full h-[450px] object-cover"
             />
@@ -397,25 +398,25 @@ export default function Home({
               className="group cursor-pointer rounded-2xl overflow-hidden bg-[#FFFCF5] border border-[#C9A45C]/35 shadow-sm hover:shadow-nalukettu hover:border-[#31543E] transition-all flex flex-col"
             >
               <div className="relative h-44 overflow-hidden bg-stone-200">
-                <img
-                  src={craft.primary_image}
-                  alt={craft.title_en}
+                <SafeImage
+                  src={craft.primary_image || craft.image || '/images/crafts/aranmula-kannadi.jpg'}
+                  alt={craft.title_en || craft.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <span className="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-[#103B30]/85 text-[#F6F0E4] text-[10px] font-sans font-semibold border border-[#C9A45C]/40">
-                  {craft.district?.name}
+                  {craft.district?.name || craft.districts?.[0]?.name || 'Kerala'}
                 </span>
               </div>
               <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
                 <div>
                   <h3 className="font-serif font-bold text-base text-[#31543E] group-hover:text-[#9E4035] transition-colors">
-                    {craft.title_en}
+                    {craft.title_en || craft.title}
                   </h3>
                   <p className="text-xs text-[#9E4035] font-malayalam mt-0.5">
                     {craft.title_ml}
                   </p>
                   <p className="text-xs text-[#2B1E16]/75 line-clamp-2 mt-2 leading-relaxed">
-                    {craft.description_en}
+                    {craft.description_en || craft.description_ml}
                   </p>
                 </div>
                 <div className="pt-2 border-t border-[#C9A45C]/25 flex items-center justify-between text-xs text-[#C9A45C] font-sans font-bold">

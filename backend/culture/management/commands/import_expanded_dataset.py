@@ -409,7 +409,7 @@ class Command(BaseCommand):
                     headquarters=d_name,
                     latitude=10.0,
                     longitude=76.0,
-                    hero_image='https://images.unsplash.com/photo-1600100397608-f010f443b749?auto=format&fit=crop&w=1200&q=80',
+                    hero_image=f'/images/districts/{slug}.jpg',
                     order=dist_dict.get('district_no', 1)
                 )
 
@@ -439,7 +439,7 @@ class Command(BaseCommand):
 
                 # Check if image in catalog
                 img_info = IMAGE_CATALOG.get(af_name, {
-                    'url': 'https://images.unsplash.com/photo-1600100397608-f010f443b749?auto=format&fit=crop&w=1000&q=80',
+                    'url': '/images/arts/theyyam.jpg',
                     'photographer': 'Wikimedia Commons (CC BY-SA 4.0)',
                     'source': 'https://www.keralatourism.org/artforms/',
                     'caption': f"{af_name} authentic tradition of Kerala",

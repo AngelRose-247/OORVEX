@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { BookOpen, Volume2, VolumeX, Sparkles, MapPin, ExternalLink } from 'lucide-react';
+import SafeImage from '../components/SafeImage';
 
 export default function CulturalStories({ listings = [], onNavigate }) {
   const { language, t } = useLanguage();
@@ -41,7 +42,7 @@ export default function CulturalStories({ listings = [], onNavigate }) {
             >
               {/* Image Frame */}
               <div className="w-full lg:w-1/2 h-72 sm:h-96 rounded-2xl overflow-hidden relative shadow-md flex-shrink-0 bg-[#E8D8B8]">
-                <img
+                <SafeImage
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover"
