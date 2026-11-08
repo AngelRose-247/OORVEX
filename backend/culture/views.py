@@ -1,3 +1,5 @@
+import logging
+
 from django.db.models import Q
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
@@ -18,15 +20,28 @@ from .serializers import (
 )
 from .ai_service import query_culturematch_ai
 
+logger = logging.getLogger(__name__)
+
 
 @api_view(['GET'])
 def district_list(request):
     """
     List all 14 Kerala districts with cultural statistics.
     """
-    districts = District.objects.all().order_by('order', 'name')
-    serializer = DistrictSerializer(districts, many=True)
-    return Response(serializer.data)
+    try:
+        districts = District.objects.all().order_by('order', 'name')
+        serializer = DistrictSerializer(districts, many=True)
+        return Response(serializer.data)
+    except Exception:
+        logger.exception(
+            "district_list: unhandled exception while fetching /api/districts/. "
+            "Likely cause: missing DB tables (run migrate + seed_cultural_data), "
+            "wrong SQLite path, or serializer error."
+        )
+        return Response(
+            {'error': 'Could not retrieve districts. See server logs for details.'},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
 
 
 @api_view(['GET'])
@@ -38,9 +53,22 @@ def district_detail(request, slug):
         district = District.objects.prefetch_related('cultural_places', 'listings').get(slug=slug)
     except District.DoesNotExist:
         return Response({'error': 'District not found'}, status=status.HTTP_404_NOT_FOUND)
+    except Exception:
+        logger.exception("district_detail: unhandled exception for slug=%s", slug)
+        return Response(
+            {'error': 'Could not retrieve district. See server logs for details.'},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
 
-    serializer = DistrictDetailSerializer(district)
-    return Response(serializer.data)
+    try:
+        serializer = DistrictDetailSerializer(district)
+        return Response(serializer.data)
+    except Exception:
+        logger.exception("district_detail: serializer error for slug=%s", slug)
+        return Response(
+            {'error': 'Could not serialize district data. See server logs for details.'},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
 
 
 @api_view(['GET'])
@@ -59,47 +87,54 @@ def listing_list(request):
     Filter and search cultural listings.
     Supports query params: district, category, search, featured, curator_status, verified_only.
     """
-    qs = CulturalListing.objects.all().select_related(
-        'category', 'origin_district'
-    ).prefetch_related(
-        'districts', 'gallery_images', 'places', 'district_associations'
-    )
+    try:
+        qs = CulturalListing.objects.all().select_related(
+            'category', 'origin_district'
+        ).prefetch_related(
+            'districts', 'gallery_images', 'places', 'district_associations'
+        )
 
-    # Optional curator status filter (e.g. ?curator_status=Verified)
-    curator_status = request.query_params.get('curator_status')
-    if curator_status:
-        qs = qs.filter(curator_status=curator_status)
-    elif request.query_params.get('verified_only') in ['true', '1', 'True']:
-        qs = qs.filter(curator_status='Verified')
+        # Optional curator status filter (e.g. ?curator_status=Verified)
+        curator_status = request.query_params.get('curator_status')
+        if curator_status:
+            qs = qs.filter(curator_status=curator_status)
+        elif request.query_params.get('verified_only') in ['true', '1', 'True']:
+            qs = qs.filter(curator_status='Verified')
 
-    district_param = request.query_params.get('district')
-    if district_param:
-        qs = qs.filter(districts__slug=district_param)
+        district_param = request.query_params.get('district')
+        if district_param:
+            qs = qs.filter(districts__slug=district_param)
 
-    category_param = request.query_params.get('category')
-    if category_param:
-        qs = qs.filter(category__slug=category_param)
+        category_param = request.query_params.get('category')
+        if category_param:
+            qs = qs.filter(category__slug=category_param)
 
-    featured_param = request.query_params.get('featured')
-    if featured_param in ['true', '1', 'True']:
-        qs = qs.filter(is_featured=True)
+        featured_param = request.query_params.get('featured')
+        if featured_param in ['true', '1', 'True']:
+            qs = qs.filter(is_featured=True)
 
-    search_query = request.query_params.get('search')
-    if search_query:
-        query = search_query.strip()
-        qs = qs.filter(
-            Q(title__icontains=query) |
-            Q(title_ml__icontains=query) |
-            Q(description_en__icontains=query) |
-            Q(locality__icontains=query) |
-            Q(cultural_story__icontains=query) |
-            Q(historical_background__icontains=query) |
-            Q(history_summary__icontains=query) |
-            Q(districts__name__icontains=query)
-        ).distinct()
+        search_query = request.query_params.get('search')
+        if search_query:
+            query = search_query.strip()
+            qs = qs.filter(
+                Q(title__icontains=query) |
+                Q(title_ml__icontains=query) |
+                Q(description_en__icontains=query) |
+                Q(locality__icontains=query) |
+                Q(cultural_story__icontains=query) |
+                Q(historical_background__icontains=query) |
+                Q(history_summary__icontains=query) |
+                Q(districts__name__icontains=query)
+            ).distinct()
 
-    serializer = CulturalListingSerializer(qs, many=True)
-    return Response(serializer.data)
+        serializer = CulturalListingSerializer(qs, many=True)
+        return Response(serializer.data)
+    except Exception:
+        logger.exception("listing_list: unhandled exception. params=%s", dict(request.query_params))
+        return Response(
+            {'error': 'Could not retrieve listings. See server logs for details.'},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
 
 
 @api_view(['GET'])
