@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { useLanguage } from '../context/LanguageContext';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { askCultureMatchAI } from '../services/api';
@@ -184,8 +185,27 @@ export default function CultureMatchModal({ isOpen, onClose, onNavigate }) {
               </div>
 
               {/* Grounded Explanation Box */}
-              <div className="prose max-w-none text-sm text-[#392A20] leading-relaxed whitespace-pre-line bg-[#F7F0DF] p-5 rounded-2xl border border-[#C6A15B]/30 shadow-sm font-sans">
-                {result.explanation}
+              <div className="bg-[#F7F0DF] p-5 rounded-2xl border border-[#C6A15B]/30 shadow-sm text-sm text-[#392A20] leading-relaxed font-sans">
+                <ReactMarkdown
+                  components={{
+                    h1: ({children}) => <h1 className="font-serif font-bold text-lg text-[#31543E] mt-4 mb-2 first:mt-0">{children}</h1>,
+                    h2: ({children}) => <h2 className="font-serif font-bold text-base text-[#31543E] mt-4 mb-2 first:mt-0">{children}</h2>,
+                    h3: ({children}) => <h3 className="font-serif font-semibold text-sm text-[#405B43] mt-3 mb-1.5 first:mt-0">{children}</h3>,
+                    p:  ({children}) => <p className="mb-3 last:mb-0">{children}</p>,
+                    strong: ({children}) => <strong className="font-bold text-[#2B1E16]">{children}</strong>,
+                    em: ({children}) => <em className="italic text-[#392A20]">{children}</em>,
+                    ul: ({children}) => <ul className="list-disc list-outside pl-5 mb-3 space-y-1">{children}</ul>,
+                    ol: ({children}) => <ol className="list-decimal list-outside pl-5 mb-3 space-y-1">{children}</ol>,
+                    li: ({children}) => <li className="text-[#392A20]">{children}</li>,
+                    hr: () => <hr className="border-[#C6A15B]/40 my-3" />,
+                    blockquote: ({children}) => <blockquote className="border-l-2 border-[#C6A15B] pl-4 italic text-[#392A20]/80 my-3">{children}</blockquote>,
+                    code: ({inline, children}) => inline
+                      ? <code className="bg-[#E8D8B8] text-[#A64F32] px-1 py-0.5 rounded text-xs">{children}</code>
+                      : <pre className="bg-[#E8D8B8] p-3 rounded-xl text-xs overflow-x-auto my-2"><code>{children}</code></pre>,
+                  }}
+                >
+                  {result.explanation}
+                </ReactMarkdown>
               </div>
 
               {/* Recommended Cultural Records Cards */}
