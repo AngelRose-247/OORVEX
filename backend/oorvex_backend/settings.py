@@ -8,15 +8,21 @@ from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Load .env file if available
+# Load .env file if available (no-op in production where env vars are set directly)
 load_dotenv(BASE_DIR / '.env')
 load_dotenv(BASE_DIR.parent / '.env')
 
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-oorvex-kerala-heritage-secret-key-2026')
+# --- Security --------------------------------------------------------------- #
 
-DEBUG = os.getenv('DEBUG', 'True') == 'True'
+# Required in production; no insecure fallback.
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
-ALLOWED_HOSTS = ['*']
+# Accepts 'true' / '1' / 'yes' (case-insensitive); anything else → False.
+DEBUG = os.getenv('DEBUG', 'false').lower() in ('true', '1', 'yes')
+
+# Comma-separated list: "example.com,www.example.com" or "*" for unrestricted.
+_raw_hosts = os.getenv('ALLOWED_HOSTS', '')
+ALLOWED_HOSTS = [h.strip() for h in _raw_hosts.split(',') if h.strip()] or (['*'] if DEBUG else [])
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -63,6 +69,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'oorvex_backend.wsgi.application'
+
+# --- Database --------------------------------------------------------------- #
 
 DATABASES = {
     'default': {
